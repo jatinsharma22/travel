@@ -11,6 +11,7 @@ import Offers from "./pages/Offers";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
+import Switzerland from "./pages/tours/Switzerland";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/switzerland" element={<Switzerland />} />
           <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

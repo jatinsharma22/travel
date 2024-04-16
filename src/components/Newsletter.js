@@ -8,12 +8,9 @@ const Newsletter = () => {
       <div className="newsletter">
         <Container>
           <div className="newsletter_box position-relative text-center">
-            <div className="position-absolute start-100 top-0 translate-middle ms-md-n3 ms-n4 mt-3">
-              <img src="../images/send.png" alt="" />
-            </div>
             <Row className="justify-content-center">
               <div className="col-lg-8 col-md-10">
-                <h2 className="text-secondary lh-1-7 mb-7">
+                <h2 className="text-white lh-1-7 mb-7 text-4xl">
                   Subscribe to our newsletter to get information, latest news
                 </h2>
                 <form className="row g-3 align-items-center w-75 mx-auto mt-4 mt-lg-5">

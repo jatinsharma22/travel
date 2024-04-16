@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Offcanvas, Container, Button, Col, Row } from "react-bootstrap";
+import { Offcanvas, Container, Form, Col, Row } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { IoCallSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
@@ -30,25 +30,25 @@ const Header = () => {
       <div
         className={`header ${
           scrolled
-            ? "header_nav position-fixed top-0 start-0 end-0 w-full scrolled"
-            : "header_nav position-fixed top-0 start-0 end-0 w-full z-2"
+            ? "header_nav sticky top-0 left-0 right-0 w-full scrolled"
+            : "header_nav top-0 left-0 right-0 w-full z-2"
         }`}
       >
         <Container>
-          <Row className="align-items-center">
+          <Row className="items-center">
             <Col md={3} className="col-4">
               <div className="logo">
                 <Link to="/">
-                  <h1 className="mb-0">Logo</h1>
+                <img src="../images/logoBlack.svg" alt="" width="150px" />
                 </Link>
               </div>
             </Col>
             <Col
               md={9}
-              className="d-flex align-items-center justify-content-end col-8"
+              className="flex items-center justify-end col-8"
             >
               <button
-                className="d-lg-none btn py-2 px-3 fs-4"
+                className="lg:hidden btn py-2 px-3 fs-4"
                 onClick={handleShow}
               >
                 <HiMenuAlt3 />
@@ -64,7 +64,7 @@ const Header = () => {
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                  <ul className="list-unstyled m-0 header_menu d-lg-flex align-items-center gap-5">
+                  <ul className="list-unstyled mb-0 mt-0 ml-0 lg:mr-5 header_menu lg:flex items-center gap-5">
                     <li>
                       <NavLink to="/" className="d-block p-lg-0 p-2">
                         Home
@@ -87,10 +87,16 @@ const Header = () => {
                     </li>
                   </ul>
 
-                  <div className="callNow flex-column d-flex d-sm-none gap-2 position-absolute bottom-0 pb-5">
+                  <Form.Select aria-label="Default select example" className="bg-transparent border-0" style={{width:"80px"}}>
+                    <option value="1">EN</option>
+                    <option value="2">FR</option>
+                    <option value="3">CH</option>
+                  </Form.Select>
+
+                  <div className="callNow flex-column flex sm:hidden gap-2 absolute bottom-0 pb-5">
                     <NavLink
                       to="booking.example@gmail.com"
-                      className="text-dark text-decoration-none"
+                      className="text-dark text-decoration-none flex"
                     >
                       <IoIosMail className="me-2 fs-4" />
                       info.booking@gmail.com
@@ -105,17 +111,17 @@ const Header = () => {
                   </div>
                 </Offcanvas.Body>
               </Offcanvas>
-              <div className="callNow ms-lg-5 ms-4 flex-column d-sm-flex d-none gap-2">
+              <div className="callNow ms-3 flex-column d-sm-flex d-none gap-2">
                 <NavLink
                   to="booking.example@gmail.com"
-                  className="text-dark text-decoration-none"
+                  className="text-dark text-decoration-none flex"
                 >
                   <IoIosMail className="me-2 fs-4" />
                   info.booking@gmail.com
                 </NavLink>
                 <NavLink
                   to="tel:+91 987654321"
-                  className="text-dark text-decoration-none"
+                  className="text-dark text-decoration-none flex"
                 >
                   <IoCallSharp className="me-2 fs-4" />
                   +91 987654321

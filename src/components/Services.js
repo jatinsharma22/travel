@@ -13,8 +13,8 @@ const Services = () => {
           </div>
           <Row className="gy-3 gy-md-5 gx-sm-5">
             <Col lg={3} sm={6}>
-              <div className="service-card shadow-hover text-center align-items-center">
-                  <img src="../images/weather.svg" alt="" className="mb-2" height="75" />
+              <div className="service-card shadow-hover text-center items-center">
+                  <img src="../images/weather.svg" alt="" className="mb-2 max-w-16" />
                   <h3 class="mb-3 fs-5">Calculated Weather</h3>
                   <p class="mb-0 fw-medium">
                     Built Wicket longer admire do barton vanity itself do in it.
@@ -22,8 +22,8 @@ const Services = () => {
               </div>
             </Col>
             <Col lg={3} sm={6}>
-              <div className="service-card shadow-hover text-center align-items-center">
-                  <img src="../images/flight.svg" alt="" className="mb-2" height="75" />
+              <div className="service-card shadow-hover text-center items-center">
+                  <img src="../images/flight.svg" alt="" className="mb-2  max-w-16"/>
                   <h3 class="mb-3 fs-5">Best Flights</h3>
                   <p class="mb-0 fw-medium">
                     Built Wicket longer admire do barton vanity itself do in it.
@@ -31,8 +31,8 @@ const Services = () => {
               </div>
             </Col>
             <Col lg={3} sm={6}>
-              <div className="service-card shadow-hover text-center align-items-center">
-                  <img src="../images/event.svg" alt="" className="mb-2" height="75"  />
+              <div className="service-card shadow-hover text-center items-center">
+                  <img src="../images/event.svg" alt="" className="mb-2 max-w-16"/>
                   <h3 class="mb-3 fs-5">Local Events</h3>
                   <p class="mb-0 fw-medium">
                     Built Wicket longer admire do barton vanity itself do in it.
@@ -40,8 +40,8 @@ const Services = () => {
               </div>
             </Col>
             <Col lg={3} sm={6}>
-              <div className="service-card shadow-hover text-center align-items-center">
-                  <img src="../images/customize.svg" alt="" className="mb-3" height="65" />
+              <div className="service-card shadow-hover text-center items-center">
+                  <img src="../images/customize.svg" alt="" className="mb-3 max-w-16"/>
                   <h3 class="mb-3 fs-5">Customization</h3>
                   <p class="mb-0 fw-medium">
                     Built Wicket longer admire do barton vanity itself do in it.

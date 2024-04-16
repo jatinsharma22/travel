@@ -4,28 +4,30 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { IoCallSharp } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
+import Newsletter from "./Newsletter";
 
 const Footer = () => {
   return (
     <>
+    <Newsletter />
       <div className="footer">
         <Container>
           <Row className="gy-4">
             <Col lg={3} md={12} sm={12}>
               <Link to="/">
-                <h1 className="mb-1">Logo</h1>
+                <img src="../images/logoBlack.svg" alt="" width="150px" />
               </Link>
               <div className="callNow flex-column d-flex gap-2 mt-4">
                 <NavLink
                   to="booking.example@gmail.com"
-                  className="text-dark text-decoration-none"
+                  className="text-dark text-decoration-none flex items-center"
                 >
                   <IoIosMail className="me-2 fs-4" />
                   info.booking@gmail.com
                 </NavLink>
                 <NavLink
                   to="tel:+91 987654321"
-                  className="text-dark text-decoration-none"
+                  className="text-dark text-decoration-none flex items-center"
                 >
                   <IoCallSharp className="me-2 fs-4" />
                   +91 987654321
@@ -33,7 +35,7 @@ const Footer = () => {
               </div>
             </Col>
             <Col lg={3} md={4} sm={6} className="col-6">
-              <h4 className="mb-4 fw-semibold">Company</h4>
+              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">Company</h4>
               <ul className="list-unstyled mb-0">
                 <li className="mb-2">
                   <Link
@@ -62,7 +64,7 @@ const Footer = () => {
               </ul>
             </Col>
             <Col lg={3} md={4} sm={6} className="col-6">
-              <h4 className="mb-4 fw-semibold">More</h4>
+              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">More</h4>
               <ul className="list-unstyled mb-0">
                 <li className="mb-2">
                   <Link
@@ -91,7 +93,7 @@ const Footer = () => {
               </ul>
             </Col>
             <Col lg={3} md={4} sm={6}>
-              <h4 className="mb-4 fw-semibold">Follow us on:</h4>
+              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">Follow us on:</h4>
               <div className="d-flex align-items-center gap-3 social_media mb-3">
                 <Link
                   to="/"

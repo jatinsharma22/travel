@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Services from "../components/Services";
-import Destination from "../components/Destination";
+import Itinerary from "../components/Itinerary";
 import { IoLocationOutline, IoPeopleSharp } from "react-icons/io5";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { MdOutlineConnectingAirports, MdOutlinePayment } from "react-icons/md";
@@ -12,20 +12,18 @@ import Newsletter from "../components/Newsletter";
 
 
 const Home = () => {
-  const bannerHeading = "Travel, enjoy and live a new and full life";
+  const bannerHeading = "Travel, enjoy and live a new life";
   const bannerParagraph =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,";
-  const subHeading = "Best Destinations around the world";
 
   return (
     <>
       <Banner
         bannerHeading={bannerHeading}
-        subHeading={subHeading}
         bannerParagraph={bannerParagraph}
       />
       <Services />
-      <Destination />
+      <Itinerary />
 
       <div className="booking">
         <Container>
@@ -107,9 +105,9 @@ const Home = () => {
                   />
                 </div>
                 <div className="p-3 bg-white booking_card shadow">
-                  <img src="../images/booking1.jpg" className="mb-4 mt-2 w-100" alt="" style={{maxHeight:"160px"}} />
+                  <img src="../images/place1.jpg" className="mb-4 mt-2 w-100" alt="" style={{maxHeight:"160px"}} />
                   <div>
-                    <h5 class="fw-medium">Trip To Greece</h5>
+                    <h5 class="mb-2 text-xl">Trip To Greece</h5>
                     <p class="fs--1 mb-3 fw-medium">14-29 June | by Robbin joseph</p>
                     <div class="d-flex gap-3 mb-4"> 
                       <span class="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><FaLeaf /></span>
@@ -117,8 +115,8 @@ const Home = () => {
                       <span class="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><MdOutlinePayment /></span>
                     </div>
                     <div className="d-flex align-items-center justify-content-between">
-                      <div>
-                      <IoPeopleSharp className="me-2"/>
+                      <div className="flex items-center">
+                        <IoPeopleSharp className="me-2"/>
                         <span class="fs--1 fw-medium">24 people going</span>
                       </div>
                       <FaHeart className="text-danger fs-5" />
@@ -130,8 +128,6 @@ const Home = () => {
           </Row>
         </Container>
       </div>
-
-      <Newsletter />
     </>
   );
 };
