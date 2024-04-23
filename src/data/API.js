@@ -7,12 +7,11 @@ export const API = [
         rating : "4.9 / 5",
     },
     {
-        image: "../images/place2.jpg",
-        title : "Amsterdam, Paris",
-        price: "INR 1,35,000",
-        days : "7D/6N",
+        image: "../images/norway5.jpg",
+        title : "Norway in a Nutshell",
+        price: "INR 1,57,800",
+        days : "8D/7N",
         rating : "4.8 / 5",
-        discount : "10% Off"
     },
     {
         image: "../images/place3.jpg",

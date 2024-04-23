@@ -59,7 +59,7 @@ const Switzerland = () => {
               <h3 className="lg:text-2xl text-xl text-black font-medium leading-[1.5] mb-6">
                 Glimpse Of Switzerland Overview
               </h3>
-              <ul class="flex items-center gap-4 text-black mb-8">
+              <ul className="flex items-center gap-4 text-black mb-8">
                 <li className="pe-4 border-r border-zinc-400 flex items-center">
                 <LuClock className="mr-2" /> 4 Days / 5 Night
                 </li>
@@ -95,39 +95,39 @@ const Switzerland = () => {
                 experience you can think of.
               </p>
 
-              <ul class="mt-base mt-8">
-                <li class="lg:flex lg:pt-6 py-6 lg:pb-6 border-t border-stock-1 last:border-b">
-                  <div class="lg:w-1/3 lg:text-2md text-md text-black font-medium">
+              <ul className="mt-base mt-8">
+                <li className="lg:flex lg:pt-6 py-6 lg:pb-6 border-t border-stock-1 last:border-b">
+                  <div className="lg:w-1/3 lg:text-2md text-md text-black font-medium">
                     Price Includes
                   </div>
-                  <div class="lg:w-2/3 lg:mt-0">
-                    <ul class="lg:grid flex flex-wrap grid-cols-2 lg:gap-y-5 gap-y-3 gap-x-3">
-                      <li class="col-span-1 text-black text-sm lg:text-base flex items-center">
-                        <div class="text-primary-1 lg:text-md text-base mr-2">
+                  <div className="lg:w-2/3 lg:mt-0">
+                    <ul className="lg:grid flex flex-wrap grid-cols-2 lg:gap-y-5 gap-y-3 gap-x-3">
+                      <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
+                        <div className="text-primary-1 lg:text-md text-base mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
                         <span>3 Nights Accommodation</span>
                       </li>
-                      <li class="col-span-1 text-black text-sm lg:text-base flex items-center">
-                        <div class="text-primary-1 lg:text-md text-base mr-2">
+                      <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
+                        <div className="text-primary-1 lg:text-md text-base mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
                         <span>Airport Transfers</span>
                       </li>
-                      <li class="col-span-1 text-black text-sm lg:text-base flex items-center">
-                        <div class="text-primary-1 lg:text-md text-base mr-2">
+                      <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
+                        <div className="text-primary-1 lg:text-md text-base mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
                         <span>2 Meals / day</span>
                       </li>
-                      <li class="col-span-1 text-black text-sm lg:text-base flex items-center">
-                        <div class="text-primary-1 text-md mr-2">
+                      <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
+                        <div className="text-primary-1 text-md mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
                         <span>Box Lunch, Dinner &amp; Snacks.</span>
                       </li>
-                      <li class="col-span-1 text-black text-sm lg:text-base flex items-center">
-                        <div class="text-primary-1 text-md mr-2">
+                      <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
+                        <div className="text-primary-1 text-md mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
                         <span>On Trip Transport</span>
@@ -135,32 +135,32 @@ const Switzerland = () => {
                     </ul>
                   </div>
                 </li>
-                <li class="lg:flex lg:pt-6 py-6 lg:pb-6 border-t border-stock-1 last:border-b">
-                  <div class="lg:w-1/3 lg:text-2md text-md text-black font-medium">
+                <li className="lg:flex lg:pt-6 py-6 lg:pb-6 border-t border-stock-1 last:border-b">
+                  <div className="lg:w-1/3 lg:text-2md text-md text-black font-medium">
                     Price Excludes
                   </div>
-                  <div class="lg:w-2/3 lg:mt-0">
-                    <ul class="lg:grid flex flex-wrap grid-cols-2 lg:gap-y-5 gap-y-3 gap-x-3">
-                      <li class="col-span-1 text-black text-sm lg:text-base flex items-center">
-                        <div class="text-primary-1 lg:text-md text-base mr-2">
+                  <div className="lg:w-2/3 lg:mt-0">
+                    <ul className="lg:grid flex flex-wrap grid-cols-2 lg:gap-y-5 gap-y-3 gap-x-3">
+                      <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
+                        <div className="text-primary-1 lg:text-md text-base mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
                         <span>Departure Taxes</span>
                       </li>
-                      <li class="col-span-1 text-black text-sm lg:text-base flex items-center">
-                        <div class="text-primary-1 lg:text-md text-base mr-2">
+                      <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
+                        <div className="text-primary-1 lg:text-md text-base mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
                         <span>Airport Transfers</span>
                       </li>
-                      <li class="col-span-1 text-black text-sm lg:text-base flex items-center">
-                        <div class="text-primary-1 lg:text-md text-base mr-2">
+                      <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
+                        <div className="text-primary-1 lg:text-md text-base mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
                         <span>Entry Fees</span>
                       </li>
-                      <li class="col-span-1 text-black text-sm lg:text-base flex items-center">
-                        <div class="text-primary-1 text-md mr-2">
+                      <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
+                        <div className="text-primary-1 text-md mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
                         <span>Box Lunch, Dinner &amp; Snacks.</span>
@@ -170,7 +170,7 @@ const Switzerland = () => {
                 </li>
               </ul>
 
-              <div class="lg:pt-10 pt-8">
+              <div className="lg:pt-10 pt-8">
                 <h3 className="text-2xl mb-3">Tour Plan</h3>
                 <p>
                   Duis id interdum ex, eu accumsan massa. Fusce vel nibh diam.
@@ -180,14 +180,14 @@ const Switzerland = () => {
                   vel nibh diam.
                 </p>
                 <div>
-                  <div class="flex single__count">
-                    <div class="shrink-0 day__count">
-                      <div class="lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
+                  <div className="flex single__count">
+                    <div className="shrink-0 day__count">
+                      <div className="lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
                         01
                       </div>
                     </div>
-                    <div class="lg:ml-[18px] ml-4 pb-8">
-                      <h5 class="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
+                    <div className="lg:ml-[18px] ml-4 pb-8">
+                      <h5 className="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
                         Day 01 : Arrival in Zurich | Welcome to the cultural hub
                         of Switzerland
                       </h5>
@@ -230,14 +230,14 @@ const Switzerland = () => {
                       </ul>
                     </div>
                   </div>
-                  <div class="flex single__count">
-                    <div class="shrink-0 day__count">
-                      <div class="lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
+                  <div className="flex single__count">
+                    <div className="shrink-0 day__count">
+                      <div className="lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
                         02
                       </div>
                     </div>
-                    <div class="lg:ml-[18px] ml-4 pb-8">
-                      <h5 class="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
+                    <div className="lg:ml-[18px] ml-4 pb-8">
+                      <h5 className="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
                         Day 02: Excursion to Mount Titlis | Half Day City Tour
                         Of Lucerne | Ascend in ROTAIR, the World's first 360
                         degress revolving Cable Car
@@ -281,14 +281,14 @@ const Switzerland = () => {
                       </ul>
                     </div>
                   </div>
-                  <div class="flex single__count">
-                    <div class="shrink-0 day__count">
-                      <div class=" lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
+                  <div className="flex single__count">
+                    <div className="shrink-0 day__count">
+                      <div className=" lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
                         03
                       </div>
                     </div>
-                    <div class="lg:ml-[18px] ml-4 pb-8">
-                      <h5 class="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
+                    <div className="lg:ml-[18px] ml-4 pb-8">
+                      <h5 className="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
                         Day 03: A day in leisure | Explore the city of Zurich at
                         your own pace
                       </h5>
@@ -315,14 +315,14 @@ const Switzerland = () => {
                       </ul>
                     </div>
                   </div>
-                  <div class="flex single__count ">
-                    <div class="shrink-0 day__count">
-                      <div class=" lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
+                  <div className="flex single__count ">
+                    <div className="shrink-0 day__count">
+                      <div className=" lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
                         04
                       </div>
                     </div>
-                    <div class="lg:ml-[18px] ml-4 pb-8">
-                      <h5 class="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
+                    <div className="lg:ml-[18px] ml-4 pb-8">
+                      <h5 className="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
                         Day 04: Excursion to Rhine Falls | Feel the goosebumps
                         on your skin as you hear the roar of Rhine Falls
                       </h5>
@@ -386,14 +386,14 @@ const Switzerland = () => {
                     </div>
                   </div>
 
-                  <div class="flex single__count ">
-                    <div class="shrink-0 day__count">
-                      <div class=" lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
+                  <div className="flex single__count ">
+                    <div className="shrink-0 day__count">
+                      <div className=" lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
                         05
                       </div>
                     </div>
-                    <div class="lg:ml-[18px] ml-4 pb-8">
-                      <h5 class="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
+                    <div className="lg:ml-[18px] ml-4 pb-8">
+                      <h5 className="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
                         Day 05: Sightseeing of Zurich | Feed your inner soccer
                         enthusiast’s desire as you witness the Fifa Football
                         Museum
@@ -443,14 +443,14 @@ const Switzerland = () => {
                     </div>
                   </div>
 
-                  <div class="flex single__count ">
-                    <div class="shrink-0 day__count">
-                      <div class=" lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
+                  <div className="flex single__count ">
+                    <div className="shrink-0 day__count">
+                      <div className=" lg:w-[52px] lg:h-[52px] w-10 h-10 rounded-full border-1 border-teal-800 text-teal-800 flex justify-center items-center lg:text-lg md:2md text-md font-semibold  bg-white">
                         06
                       </div>
                     </div>
-                    <div class="lg:ml-[18px] ml-4 pb-8">
-                      <h5 class="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
+                    <div className="lg:ml-[18px] ml-4 pb-8">
+                      <h5 className="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
                         Day 06: Transfer to Zurich airport | Bid adieu to Zurich
                       </h5>
                       <ul className="flex flex-col gap-3">

@@ -102,7 +102,8 @@ const Footer = () => {
                   <FaFacebookF />
                 </Link>
                 <Link
-                  to="/"
+                  to="https://www.instagram.com/uniquetravelcrafters?igsh=MW82dnFlNGhrczZxaQ%3D%3D&utm_source=qr"
+                  target="_blank"
                   className="d-flex align-items-center justify-content-center rounded-circle shadow"
                 >
                   <FaInstagram />
