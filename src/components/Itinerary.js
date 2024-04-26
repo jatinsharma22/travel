@@ -46,7 +46,7 @@ const Destination = () => {
             {API.map((element, key) => {
               return (
                 <div className="py-sm-5 pb-4 px-3" key={key}>
-                  <Link to="/norway" className="destination_card shadow_custom">
+                  <Link to={element.link} className="destination_card shadow_custom">
                     <div className="overflow-hidden relative">
                       <img src={element.image} alt="" className="w-full" />
                       {

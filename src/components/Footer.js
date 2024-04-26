@@ -19,7 +19,7 @@ const Footer = () => {
               </Link>
               <div className="callNow flex-column d-flex gap-2 mt-4">
                 <NavLink
-                  to="booking.example@gmail.com"
+                  to="mailto:booking.example@gmail.com"
                   className="text-dark text-decoration-none flex items-center"
                 >
                   <IoIosMail className="me-2 fs-4" />
@@ -40,7 +40,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <Link
                     className="fw-medium text-decoration-none"
-                    to="/"
+                    to="/about"
                   >
                     About
                   </Link>
@@ -56,7 +56,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <Link
                     className="fw-medium text-decoration-none"
-                    to="/"
+                    to="/contact"
                   >
                     Contact
                   </Link>

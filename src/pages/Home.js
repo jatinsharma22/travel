@@ -4,9 +4,9 @@ import Services from "../components/Services";
 import Itinerary from "../components/Itinerary";
 import { IoLocationOutline, IoPeopleSharp } from "react-icons/io5";
 import { RiSecurePaymentLine } from "react-icons/ri";
+import { FaHeart, FaLeaf, FaMapMarkedAlt } from "react-icons/fa";
 import { MdOutlineConnectingAirports, MdOutlinePayment } from "react-icons/md";
 import { Col, Container, Row } from "react-bootstrap";
-import { FaHeart, FaLeaf, FaMapMarkedAlt } from "react-icons/fa";
 import Newsletter from "../components/Newsletter";
 
 

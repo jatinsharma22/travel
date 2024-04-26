@@ -38,9 +38,8 @@ a {
 .header_menu li a {
   color: #212832;
 }
-.banner_main {
-  padding: 240px 0;
-  background: url(../images/banner_bg.jpg) no-repeat center top / cover;
+.homeBannerWrap .slick-arrow  {
+  display: none !important;
 }
 .bg_holder {
   position: absolute;

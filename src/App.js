@@ -13,6 +13,8 @@ import Error from "./pages/Error";
 import Footer from "./components/Footer";
 import Switzerland from "./pages/tours/Switzerland";
 import Norway from "./pages/tours/Norway";
+import Greece from "./pages/tours/Greece";
+import Singapore from "./pages/tours/Singapore";
 
 function App() {
   return (
@@ -24,8 +26,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/greece" element={<Greece />} />
           <Route path="/switzerland" element={<Switzerland />} />
           <Route path="/norway" element={<Norway />} />
+          <Route path="/singapore" element={<Singapore />} />
           <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

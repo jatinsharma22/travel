@@ -66,22 +66,22 @@ const Header = () => {
                 <Offcanvas.Body>
                   <ul className="list-unstyled mb-0 mt-0 ml-0 lg:mr-5 header_menu lg:flex items-center gap-5">
                     <li>
-                      <NavLink to="/" className="d-block p-lg-0 p-2">
+                      <NavLink to="/" className="d-block p-lg-0 p-2 hover:text-teal-600">
                         Home
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/about" className="d-block p-lg-0 p-2">
+                      <NavLink to="/about" className="d-block p-lg-0 p-2 hover:text-teal-600">
                         About Us
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/offers" className="d-block p-lg-0 p-2">
+                      <NavLink to="/offers" className="d-block p-lg-0 p-2 hover:text-teal-600">
                         Offers
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/contact" className="d-block p-lg-0 p-2">
+                      <NavLink to="/contact" className="d-block p-lg-0 p-2 hover:text-teal-600">
                         Contact Us
                       </NavLink>
                     </li>
