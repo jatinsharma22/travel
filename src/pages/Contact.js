@@ -5,6 +5,7 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 import { IoMdCheckmark, IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { IoIosMail } from "react-icons/io";
+import { BiSupport } from "react-icons/bi";
 
 const Contact = () => {
   return (
@@ -36,7 +37,7 @@ const Contact = () => {
                   <h5 className="text-secondary fw-bold fs-0 text-dark">
                     Address
                   </h5>
-                  <p className="m-0">
+                  <p className="m-0 text-black">
                     13th Street, 47 W 13th St,
                     <br className="d-none d-sm-block" /> New York, NY 10011, USA
                   </p>
@@ -51,15 +52,18 @@ const Contact = () => {
                   <RiSecurePaymentLine className="fs-2 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h5 className="text-secondary fw-bold fs-0 text-dark">
+                  <h5 className="text-secondary fw-bold fs-0 text-dark mb-1.5">
                     Phone
                   </h5>
-                  <Link to="tel:+91 987654321">+91 987654321</Link>
-                  <br />
-                  <Link to="tel:+91 987654321">+91 987654321</Link>
+                  <Link
+                    to="tel:+13478717951"
+                    className="text-dark text-decoration-none flex items-center"
+                  >
+                    +13478717951
+                  </Link>
                 </div>
               </div>
-              <div className="d-flex align-items-start">
+              <div className="d-flex align-items-start mb-lg-5 mb-3">
                 <div
                   className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
                   style={{ backgroundColor: "#006380" }}
@@ -67,10 +71,31 @@ const Contact = () => {
                   <IoIosMail className="fs-2 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h5 className="text-secondary fw-bold fs-0 text-dark">
+                  <h5 className="text-secondary fw-bold fs-0 text-dark mb-1.5">
                     Email
                   </h5>
-                  <p className="m-0">info.booking@gmail.com</p>
+                  <Link
+                    to="mailto:support@uniquetravelcrafters.com"
+                    className="text-dark text-decoration-none flex items-center text-black"
+                  >
+                    support@uniquetravelcrafters.com
+                  </Link>
+                </div>
+              </div>
+              <div className="d-flex align-items-start">
+                <div
+                  className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
+                  style={{ backgroundColor: "#51df62" }}
+                >
+                  <BiSupport className="fs-2 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h5 className="text-secondary fw-bold fs-0 text-dark mb-1.5">
+                    Support
+                  </h5>
+                  <p className="text-dark text-decoration-none flex items-center">
+                    24X7 Support
+                  </p>
                 </div>
               </div>
             </Col>
@@ -152,17 +177,6 @@ const Contact = () => {
                           className="px-3 block w-full rounded-md border-1 py-2.5 text-gray-900 shadow-sm placeholder:text-gray-400  sm:text-sm sm:leading-6 ring-0 focus:ring-0 focus:border-0 focus:shadow-none"
                         />
                       </div>
-                    </div>
-                    <div>
-                      <input
-                        id="count"
-                        name="count"
-                        type="number"
-                        min="1"
-                        placeholder="Travel Count"
-                        required
-                        className="px-3 block w-full rounded-md border-1 py-2.5 text-gray-900 shadow-sm placeholder:text-gray-400  sm:text-sm sm:leading-6 ring-0 focus:ring-0 focus:border-0 focus:shadow-none"
-                      />
                     </div>
 
                     <div>

@@ -5,11 +5,12 @@ import { IoIosMail } from "react-icons/io";
 import { IoCallSharp } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 import Newsletter from "./Newsletter";
+import { BiSupport } from "react-icons/bi";
 
 const Footer = () => {
   return (
     <>
-    <Newsletter />
+      <Newsletter />
       <div className="footer">
         <Container>
           <Row className="gy-4">
@@ -17,83 +18,7 @@ const Footer = () => {
               <Link to="/">
                 <img src="../images/logoBlack.svg" alt="" width="150px" />
               </Link>
-              <div className="callNow flex-column d-flex gap-2 mt-4">
-                <NavLink
-                  to="mailto:booking.example@gmail.com"
-                  className="text-dark text-decoration-none flex items-center"
-                >
-                  <IoIosMail className="me-2 fs-4" />
-                  info.booking@gmail.com
-                </NavLink>
-                <NavLink
-                  to="tel:+91 987654321"
-                  className="text-dark text-decoration-none flex items-center"
-                >
-                  <IoCallSharp className="me-2 fs-4" />
-                  +91 987654321
-                </NavLink>
-              </div>
-            </Col>
-            <Col lg={3} md={4} sm={6} className="col-6">
-              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">Company</h4>
-              <ul className="list-unstyled mb-0">
-                <li className="mb-2">
-                  <Link
-                    className="fw-medium text-decoration-none"
-                    to="/about"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link
-                    className="fw-medium text-decoration-none"
-                    to="/"
-                  >
-                    Offers
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link
-                    className="fw-medium text-decoration-none"
-                    to="/contact"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </Col>
-            <Col lg={3} md={4} sm={6} className="col-6">
-              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">More</h4>
-              <ul className="list-unstyled mb-0">
-                <li className="mb-2">
-                  <Link
-                    className="fw-medium text-decoration-none"
-                    to="/"
-                  >
-                    Galery
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link
-                    className="fw-medium text-decoration-none"
-                    to="/"
-                  >
-                    Testimonial
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link
-                    className="fw-medium text-decoration-none"
-                    to="/"
-                  >
-                    FAQ
-                  </Link>
-                </li>
-              </ul>
-            </Col>
-            <Col lg={3} md={4} sm={6}>
-              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">Follow us on:</h4>
+              <h5 className="mb-2 fw-semibold text-xl mt-3">Follow us on:</h5>
               <div className="d-flex align-items-center gap-3 social_media mb-3">
                 <Link
                   to="/"
@@ -116,9 +41,75 @@ const Footer = () => {
                 </Link>
               </div>
             </Col>
+            <Col lg={3} md={4} sm={6} className="col-6">
+              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">Company</h4>
+              <ul className="list-unstyled mb-0">
+                <li className="mb-2">
+                  <Link className="fw-medium text-decoration-none" to="/about">
+                    About
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link className="fw-medium text-decoration-none" to="/">
+                    Offers
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    className="fw-medium text-decoration-none"
+                    to="/contact"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </Col>
+            <Col lg={3} md={4} sm={6} className="col-6">
+              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">More</h4>
+              <ul className="list-unstyled mb-0">
+                <li className="mb-2">
+                  <Link className="fw-medium text-decoration-none" to="/">
+                    Gallery
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link className="fw-medium text-decoration-none" to="/">
+                    Testimonial
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link className="fw-medium text-decoration-none" to="/">
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
+            </Col>
+            <Col lg={3} md={4} sm={6}>
+              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">Contacts</h4>
+              <div className="callNow flex-column d-flex gap-2 mt-4">
+                <NavLink
+                  to="tel:+13478717951"
+                  className="text-dark text-decoration-none flex items-center"
+                >
+                  <IoCallSharp className="me-2 fs-4" />
+                  +13478717951
+                </NavLink>
+                <NavLink
+                  to="mailto:support@uniquetravelcrafters.com"
+                  className="text-dark text-decoration-none flex items-center"
+                >
+                  <IoIosMail className="me-2 fs-4" />
+                  support@uniquetravelcrafters.com
+                </NavLink>
+                <p className="text-dark text-decoration-none flex items-center">
+                  <BiSupport className="me-2 fs-4" />
+                  24X7 Support
+                </p>
+              </div>
+            </Col>
           </Row>
           <div className="text-center pt-5">
-            <p className="mb-0">All rights reserved@travel.co</p>
+            <p className="mb-0">All rights reserved @uniquetravelcrafters</p>
           </div>
         </Container>
       </div>

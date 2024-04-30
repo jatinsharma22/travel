@@ -18,13 +18,22 @@ const Banner = ({ bannerHeading, bannerParagraph }) => {
       <div className="position-relative homeBannerWrap">
         <Slider {...settings}>
           <div>
-            <img src="../images/singaporeBanner.jpg" alt="" />
+            <img src="../images/banner1.jpg" alt="" />
           </div>
           <div>
-            <img src="../images/greeceBanner.jpg" alt="" />
+            <img src="../images/banner2.jpg" alt="" />
           </div>
           <div>
-            <img src="../images/norwayBanner.jpg" alt="" />
+            <img src="../images/banner3.jpg" alt="" />
+          </div>
+          <div>
+            <img src="../images/banner4.jpg" alt="" />
+          </div>
+          <div>
+            <img src="../images/banner5.jpg" alt="" />
+          </div>
+          <div>
+            <img src="../images/banner6.jpg" alt="" />
           </div>
         </Slider>
 

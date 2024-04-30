@@ -7,6 +7,7 @@ import { FaStar } from "react-icons/fa";
 import Slider from "react-slick";
 
 const Destination = () => {
+  
   var settings = {
     dots: false,
     infinite: true,
@@ -46,7 +47,7 @@ const Destination = () => {
             {API.map((element, key) => {
               return (
                 <div className="py-sm-5 pb-4 px-3" key={key}>
-                  <Link to={element.link} className="destination_card shadow_custom">
+                  <a href={element.link} className="destination_card shadow_custom">
                     <div className="overflow-hidden relative">
                       <img src={element.image} alt="" className="w-full" />
                       {
@@ -73,7 +74,7 @@ const Destination = () => {
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </a>
                 </div>
               );
             })}

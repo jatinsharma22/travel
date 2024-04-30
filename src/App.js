@@ -15,13 +15,16 @@ import Switzerland from "./pages/tours/Switzerland";
 import Norway from "./pages/tours/Norway";
 import Greece from "./pages/tours/Greece";
 import Singapore from "./pages/tours/Singapore";
+import { useEffect } from "react";
 
 function App() {
+ 
+
   return (
     
-    <BrowserRouter>
+    <BrowserRouter scrollBehavior={false}>
       <Header />
-      <Routes>
+      <Routes scrollBehavior={false}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/offers" element={<Offers />} />
