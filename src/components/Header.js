@@ -102,7 +102,7 @@ const Header = () => {
                         to="/package"
                         className="d-block px-2 pt-2 pb-2.5 hover:text-teal-600 border-b-2 border-transparent"
                       >
-                        Packages
+                        Package
                       </NavLink>
                     </li>
                     <li>

@@ -15,6 +15,7 @@ const Error = () => {
   return (
     <>
       <Banner pageHead={pageHead} pageSlug={pageSlug} />
+      <div className="py-6"></div>
     </>
   )
 }
