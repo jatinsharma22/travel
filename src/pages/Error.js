@@ -15,7 +15,6 @@ const Error = () => {
   return (
     <>
       <Banner pageHead={pageHead} pageSlug={pageSlug} />
-      <h1>Error</h1>
     </>
   )
 }
