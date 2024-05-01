@@ -1,5 +1,5 @@
-import React from "react";
-import Banner from "../components/Banner";
+import React, { useEffect } from "react";
+import HomeSlider from "../components/HomeSlider";
 import Services from "../components/Services";
 import Itinerary from "../components/Itinerary";
 import { IoLocationOutline, IoPeopleSharp } from "react-icons/io5";
@@ -7,18 +7,20 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 import { FaHeart, FaLeaf, FaMapMarkedAlt } from "react-icons/fa";
 import { MdOutlineConnectingAirports, MdOutlinePayment } from "react-icons/md";
 import { Col, Container, Row } from "react-bootstrap";
-import Newsletter from "../components/Newsletter";
-
 
 
 const Home = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   const bannerHeading = "Travel, enjoy and live a new life";
   const bannerParagraph =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,";
 
   return (
     <>
-      <Banner
+      <HomeSlider
         bannerHeading={bannerHeading}
         bannerParagraph={bannerParagraph}
       />
@@ -95,7 +97,7 @@ const Home = () => {
             >
               <div className="position-relative">
                 <div
-                  class="position-absolute z-index--1 me-10 me-xxl-0"
+                  className="position-absolute z-index--1 me-10 me-xxl-0"
                   style={{ right: "-160px", top: "-210px" }}
                 >
                   <img
@@ -107,17 +109,17 @@ const Home = () => {
                 <div className="p-3 bg-white booking_card shadow">
                   <img src="../images/place1.jpg" className="mb-4 mt-2 w-100" alt="" style={{maxHeight:"160px"}} />
                   <div>
-                    <h5 class="mb-2 text-xl">Trip To Greece</h5>
-                    <p class="fs--1 mb-3 fw-medium">14-29 June | by Robbin joseph</p>
-                    <div class="d-flex gap-3 mb-4"> 
-                      <span class="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><FaLeaf /></span>
-                      <span class="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><FaMapMarkedAlt /></span>
-                      <span class="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><MdOutlinePayment /></span>
+                    <h5 className="mb-2 text-xl">Trip To Greece</h5>
+                    <p className="fs--1 mb-3 fw-medium">14-29 June | by Robbin joseph</p>
+                    <div className="d-flex gap-3 mb-4"> 
+                      <span className="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><FaLeaf /></span>
+                      <span className="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><FaMapMarkedAlt /></span>
+                      <span className="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><MdOutlinePayment /></span>
                     </div>
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="flex items-center">
                         <IoPeopleSharp className="me-2"/>
-                        <span class="fs--1 fw-medium">24 people going</span>
+                        <span className="fs--1 fw-medium">24 people going</span>
                       </div>
                       <FaHeart className="text-danger fs-5" />
                     </div>

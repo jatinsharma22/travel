@@ -1,23 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { IoLocationOutline, IoPeopleSharp } from "react-icons/io5";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { FaHeart, FaLeaf, FaMapMarkedAlt } from "react-icons/fa";
 import { MdOutlineConnectingAirports, MdOutlinePayment } from "react-icons/md";
+import Banner from "../components/Banner";
 
 const About = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
+  const pageHead = "Contact us today to start planning your next extraordinary trip"
   return (
     <>
-      <div className="relative bg-[url('../images/aboutBanner.jpg')] bg-cover bg-no-repeat px-5 text-center py-72 after:absolute after:w-full after:content-[''] after:h-full after:bg-black after:left-0 after:top-0 after:right-0 after:bottom-0 after:opacity-40">
-        <p className="text-2xl font-light text-white tracking-wider z-50 relative">
-          UNLOCKING THE WORLD
-        </p>
-        <h1 className="text-[50px] font-bold text-white z-50 relative">
-          Contact us today to start planning <br /> your next extraordinary trip
-        </h1>
-      </div>
+      <Banner pageHead={pageHead} />
+
+
       <div className="py-20">
         <Container>
+        <div className="section_heading">
+            <h2 className="fw-bold text-capitalize text-start">About Us</h2>
+          </div>
           <Row>
             <Col lg={6}>
               <h2 className="text-3xl mb-6">What is Lorem Ipsum?</h2>
@@ -127,7 +131,7 @@ const About = () => {
             >
               <div className="position-relative">
                 <div
-                  class="position-absolute z-index--1 me-10 me-xxl-0"
+                  className="position-absolute z-index--1 me-10 me-xxl-0"
                   style={{ right: "-160px", top: "-210px" }}
                 >
                   <img
@@ -139,17 +143,17 @@ const About = () => {
                 <div className="p-3 bg-white booking_card shadow">
                   <img src="../images/place1.jpg" className="mb-4 mt-2 w-100" alt="" style={{maxHeight:"160px"}} />
                   <div>
-                    <h5 class="mb-2 text-xl">Trip To Greece</h5>
-                    <p class="fs--1 mb-3 fw-medium">14-29 June | by Robbin joseph</p>
-                    <div class="d-flex gap-3 mb-4"> 
-                      <span class="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><FaLeaf /></span>
-                      <span class="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><FaMapMarkedAlt /></span>
-                      <span class="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><MdOutlinePayment /></span>
+                    <h5 className="mb-2 text-xl">Trip To Greece</h5>
+                    <p className="fs--1 mb-3 fw-medium">14-29 June | by Robbin joseph</p>
+                    <div className="d-flex gap-3 mb-4"> 
+                      <span className="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><FaLeaf /></span>
+                      <span className="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><FaMapMarkedAlt /></span>
+                      <span className="d-flex align-items-center justify-content-center icon-item text-black-50 fs-6"><MdOutlinePayment /></span>
                     </div>
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="flex items-center">
                         <IoPeopleSharp className="me-2"/>
-                        <span class="fs--1 fw-medium">24 people going</span>
+                        <span className="fs--1 fw-medium">24 people going</span>
                       </div>
                       <FaHeart className="text-danger fs-5" />
                     </div>

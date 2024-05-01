@@ -79,32 +79,37 @@ const Header = () => {
                   <ul className="list-unstyled mb-0 mt-0 ml-0 lg:mr-5 header_menu lg:flex items-center gap-5">
                     <li>
                       <NavLink
+                        exact
+                        activeClassName="active"
                         to="/"
-                        className="d-block p-lg-0 p-2 hover:text-teal-600"
+                        className="d-block px-2 pt-2 pb-2.5 hover:text-teal-600 border-b-2 border-transparent"
                       >
                         Home
                       </NavLink>
                     </li>
                     <li>
                       <NavLink
+                        activeClassName="active"
                         to="/about"
-                        className="d-block p-lg-0 p-2 hover:text-teal-600"
+                        className="d-block px-2 pt-2 pb-2.5 hover:text-teal-600 border-b-2 border-transparent"
                       >
                         About Us
                       </NavLink>
                     </li>
                     <li>
                       <NavLink
-                        to="/offers"
-                        className="d-block p-lg-0 p-2 hover:text-teal-600"
+                        activeClassName="active"
+                        to="/package"
+                        className="d-block px-2 pt-2 pb-2.5 hover:text-teal-600 border-b-2 border-transparent"
                       >
-                        Offers
+                        Packages
                       </NavLink>
                     </li>
                     <li>
                       <NavLink
+                        activeClassName="active"
                         to="/contact"
-                        className="d-block p-lg-0 p-2 hover:text-teal-600"
+                        className="d-block px-2 pt-2 pb-2.5 hover:text-teal-600 border-b-2 border-transparent"
                       >
                         Contact Us
                       </NavLink>
@@ -120,23 +125,6 @@ const Header = () => {
                     <option value="2">FR</option>
                     <option value="3">CH</option>
                   </Form.Select>
-
-                  <div className="callNow flex-column flex sm:hidden gap-2 absolute bottom-0 pb-5">
-                    <NavLink
-                      to="booking.example@gmail.com"
-                      className="text-dark text-decoration-none flex"
-                    >
-                      <IoIosMail className="me-2 fs-4" />
-                      info.booking@gmail.com
-                    </NavLink>
-                    <NavLink
-                      to="tel:+91 987654321"
-                      className="text-dark text-decoration-none"
-                    >
-                      <IoCallSharp className="me-2 fs-4" />
-                      +91 987654321
-                    </NavLink>
-                  </div>
                 </Offcanvas.Body>
               </Offcanvas>
               <div className="ms-3">
@@ -149,7 +137,10 @@ const Header = () => {
         </Container>
       </div>
       <Modal show={login} onHide={handleCloseLogin} centered size="xl">
-        <Modal.Header closeButton className="p-0 border-0 absolute right-4 top-4 z-50"></Modal.Header>
+        <Modal.Header
+          closeButton
+          className="p-0 border-0 absolute right-4 top-4 z-50"
+        ></Modal.Header>
         <Modal.Body className="p-0">
           <Row className="gx-0">
             <Col md={6}>
@@ -158,7 +149,7 @@ const Header = () => {
             <Col md={6}>
               <Tabs defaultActiveKey="login" id="loginSignup" className="">
                 <Tab eventKey="login" title="Login">
-                <form className="space-y-4 p-4 " action="#" method="POST">
+                  <form className="space-y-4 p-4 " action="#" method="POST">
                     <div>
                       <input
                         id="email"
@@ -182,16 +173,16 @@ const Header = () => {
                       />
                     </div>
                     <div className="flex items-center my-4">
-                      <div class="flex items-center">
+                      <div className="flex items-center">
                         <input
                           id="t-c"
                           type="checkbox"
                           value=""
-                          class="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 rounded focus:ring-0 ring-0"
+                          className="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 rounded focus:ring-0 ring-0"
                         />
                         <label
                           for="t-c"
-                          class="ms-2 text-sm font-medium text-gray-500"
+                          className="ms-2 text-sm font-medium text-gray-500"
                         >
                           Remember me
                         </label>
@@ -205,12 +196,10 @@ const Header = () => {
                         Sign In
                       </button>
                     </div>
-
                   </form>
                 </Tab>
                 <Tab eventKey="signup" title="Signup">
-                  
-                <form className="space-y-4 p-4 " action="#" method="POST">
+                  <form className="space-y-4 p-4 " action="#" method="POST">
                     <div>
                       <input
                         id="name"
@@ -277,16 +266,16 @@ const Header = () => {
                         className="px-3 block w-full rounded-md border-1 py-3 text-gray-900 shadow-sm placeholder:text-gray-400  sm:text-sm sm:leading-6 ring-0 focus:ring-0 focus:border-0 focus:shadow-none"
                       />
                     </div>
-                    <div class="flex items-center mb-4">
+                    <div className="flex items-center mb-4">
                       <input
                         id="t-c"
                         type="checkbox"
                         value=""
-                        class="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 rounded focus:ring-0 ring-0"
+                        className="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 rounded focus:ring-0 ring-0"
                       />
                       <label
                         for="t-c"
-                        class="ms-2 text-sm font-medium text-gray-500"
+                        className="ms-2 text-sm font-medium text-gray-500"
                       >
                         I agree to the Terms and Privacy Policy.
                       </label>

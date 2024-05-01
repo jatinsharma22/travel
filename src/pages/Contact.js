@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { IoLocationOutline, IoPeopleSharp } from "react-icons/io5";
 import { RiSecurePaymentLine } from "react-icons/ri";
@@ -6,18 +6,17 @@ import { IoMdCheckmark, IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { IoIosMail } from "react-icons/io";
 import { BiSupport } from "react-icons/bi";
+import Banner from "../components/Banner";
 
 const Contact = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
+  const pageHead = "Contact us today to start planning your next extraordinary trip"
   return (
     <>
-      <div className="relative bg-[url('../images/aboutBanner.jpg')] bg-cover bg-no-repeat px-5 text-center py-72 after:absolute after:w-full after:content-[''] after:h-full after:bg-black after:left-0 after:top-0 after:right-0 after:bottom-0 after:opacity-40">
-        <p className="text-2xl font-light text-white tracking-wider z-50 relative">
-          UNLOCKING THE WORLD
-        </p>
-        <h1 className="text-[50px] font-bold text-white z-50 relative">
-          Contact us today to start planning <br /> your next extraordinary trip
-        </h1>
-      </div>
+      <Banner pageHead={pageHead} />
 
       <div className="booking">
         <Container>
@@ -26,47 +25,11 @@ const Contact = () => {
               <div className="section_heading mb-4 mb-sm-5 text-start">
                 <h2 className="fw-bold text-capitalize">Contact Us</h2>
               </div>
-              <div className="d-flex align-items-start mb-lg-5 mb-3">
-                <div
-                  className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
-                  style={{ backgroundColor: "#F1A501" }}
-                >
-                  <IoLocationOutline className="fs-2 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h5 className="text-secondary fw-bold fs-0 text-dark">
-                    Address
-                  </h5>
-                  <p className="m-0 text-black">
-                    13th Street, 47 W 13th St,
-                    <br className="d-none d-sm-block" /> New York, NY 10011, USA
-                  </p>
-                </div>
-              </div>
 
               <div className="d-flex align-items-start mb-lg-5 mb-3">
                 <div
                   className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
-                  style={{ backgroundColor: "#DF6951" }}
-                >
-                  <RiSecurePaymentLine className="fs-2 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h5 className="text-secondary fw-bold fs-0 text-dark mb-1.5">
-                    Phone
-                  </h5>
-                  <Link
-                    to="tel:+13478717951"
-                    className="text-dark text-decoration-none flex items-center"
-                  >
-                    +13478717951
-                  </Link>
-                </div>
-              </div>
-              <div className="d-flex align-items-start mb-lg-5 mb-3">
-                <div
-                  className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
-                  style={{ backgroundColor: "#006380" }}
+                  style={{ backgroundColor: "#F1A501" }}
                 >
                   <IoIosMail className="fs-2 text-white" />
                 </div>
@@ -76,7 +39,7 @@ const Contact = () => {
                   </h5>
                   <Link
                     to="mailto:support@uniquetravelcrafters.com"
-                    className="text-dark text-decoration-none flex items-center text-black"
+                    className="text-dark text-decoration-none flex items-center text-black hover:text-teal-600"
                   >
                     support@uniquetravelcrafters.com
                   </Link>
@@ -85,17 +48,20 @@ const Contact = () => {
               <div className="d-flex align-items-start">
                 <div
                   className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
-                  style={{ backgroundColor: "#51df62" }}
+                  style={{ backgroundColor: "#DF6951" }}
                 >
                   <BiSupport className="fs-2 text-white" />
                 </div>
                 <div className="flex-1">
                   <h5 className="text-secondary fw-bold fs-0 text-dark mb-1.5">
-                    Support
+                  24X7 Support
                   </h5>
-                  <p className="text-dark text-decoration-none flex items-center">
-                    24X7 Support
-                  </p>
+                  <Link
+                    to="tel:+13478717951"
+                    className="text-dark text-decoration-none flex items-center hover:text-teal-600"
+                  >
+                    +1 3478717951
+                  </Link>
                 </div>
               </div>
             </Col>
@@ -105,7 +71,7 @@ const Contact = () => {
             >
               <div className="position-relative">
                 <div
-                  class="position-absolute z-index--1 me-10 me-xxl-0"
+                  className="position-absolute z-index--1 me-10 me-xxl-0"
                   style={{ left: "-260px", top: "-110px" }}
                 >
                   <img
@@ -190,13 +156,13 @@ const Contact = () => {
                       />
                     </div>
 
-                    <p className="flex">
+                    <p className="flex mb-0">
                       <IoMdCheckmark className="text-teal-600 w-5 mt-1 mr-2" />
                       <span className="flex-1">
                         We assure the privacy of your contact data.
                       </span>
                     </p>
-                    <p className="flex">
+                    <p className="flex mb-0">
                       <IoMdCheckmark className="text-teal-600 w-5 mt-1 mr-2" />{" "}
                       <span className="flex-1">
                         This data will only be used by our team to contact you

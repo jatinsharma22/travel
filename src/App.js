@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Offers from "./pages/Offers";
+import Package from "./pages/Package";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
@@ -15,19 +15,16 @@ import Switzerland from "./pages/tours/Switzerland";
 import Norway from "./pages/tours/Norway";
 import Greece from "./pages/tours/Greece";
 import Singapore from "./pages/tours/Singapore";
-import { useEffect } from "react";
 
 function App() {
- 
-
   return (
     
-    <BrowserRouter scrollBehavior={false}>
+    <BrowserRouter>
       <Header />
-      <Routes scrollBehavior={false}>
+      <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/offers" element={<Offers />} />
+          <Route path="/package" element={<Package />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/greece" element={<Greece />} />
           <Route path="/switzerland" element={<Switzerland />} />

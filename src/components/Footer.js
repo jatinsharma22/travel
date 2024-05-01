@@ -50,8 +50,8 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className="mb-2">
-                  <Link className="fw-medium text-decoration-none" to="/">
-                    Offers
+                  <Link className="fw-medium text-decoration-none" to="/package">
+                    Package
                   </Link>
                 </li>
                 <li className="mb-2">

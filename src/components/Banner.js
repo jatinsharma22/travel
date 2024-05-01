@@ -1,53 +1,26 @@
-import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import Slider from "react-slick";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-const Banner = ({ bannerHeading, bannerParagraph }) => {
-  var settings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    nav: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 0,
-  };
+const Banner = ({ pageHead, pageSlug }) => {
+  let location = useLocation();
+  useEffect(() => {
+    console.log(location.pathname);
+  }, []);
+
   return (
     <>
-      <div className="position-relative homeBannerWrap">
-        <Slider {...settings}>
-          <div>
-            <img src="../images/banner1.jpg" alt="" />
-          </div>
-          <div>
-            <img src="../images/banner2.jpg" alt="" />
-          </div>
-          <div>
-            <img src="../images/banner3.jpg" alt="" />
-          </div>
-          <div>
-            <img src="../images/banner4.jpg" alt="" />
-          </div>
-          <div>
-            <img src="../images/banner5.jpg" alt="" />
-          </div>
-          <div>
-            <img src="../images/banner6.jpg" alt="" />
-          </div>
-        </Slider>
-
-        <section className="banner_main absolute w-full top-[50%] -translate-y-1/2">
-          <Container className="">
-            <div className="banner_main_caption">
-              <h1 className="hero-title">{bannerHeading}</h1>
-              <p className="mb-4">{bannerParagraph}</p>
-              <Link className="btn" to="/offers">
-                Find out more
-              </Link>
-            </div>
-          </Container>
-        </section>
+      <div className="relative bg-[url('../images/aboutBanner.jpg')] bg-cover bg-no-repeat px-5 text-center py-72 after:absolute after:w-full after:content-[''] after:h-full after:bg-black after:left-0 after:top-0 after:right-0 after:bottom-0 after:opacity-40">
+        <div className="z-50 relative max-w-[920px] mx-auto">
+          <p className="text-2xl font-light text-white tracking-wider">
+            UNLOCKING THE WORLD
+          </p>
+          <h1 className="text-[50px] font-bold text-white">{pageHead}</h1>
+          {pageSlug && (
+            <Link className="btn fs-5 mt-10" to="/">
+              Home
+            </Link>
+          )}
+        </div>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaCar, FaRegStar, FaStar } from "react-icons/fa";
 import { LiaParachuteBoxSolid } from "react-icons/lia";
@@ -9,6 +9,10 @@ import { MdHotel } from "react-icons/md";
 import { GiMeal } from "react-icons/gi";
 
 const Norway = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <>
       <Row className="g-0 m-0">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaRegStar, FaStar,  } from "react-icons/fa";
 import { IoMdCheckmark } from "react-icons/io";
@@ -7,6 +7,10 @@ import { LuClock } from "react-icons/lu";
 
 
 const Switzerland = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <>
       <Row className="g-0 m-0">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaCar, FaRegStar, FaStar } from "react-icons/fa";
 import { LiaParachuteBoxSolid } from "react-icons/lia";
@@ -8,6 +8,10 @@ import { LuClock } from "react-icons/lu";
 import { MdFlight, MdHotel, MdOutlineNightsStay } from "react-icons/md";
 
 const Singapore = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <>
       <Row className="g-0 m-0">
