@@ -62,7 +62,7 @@ const About = () => {
                 <h2 className="fw-bold text-capitalize mb-3">
                   Book your dream holiday in 3 simple steps
                 </h2>
-                <p>Don’t stress! This is fun! Now iis the time to plan the vacation of your dreams. Leave the planning to us. </p>
+                <p>Don’t stress! This is fun! Now is the time to plan the vacation of your dreams. Leave the planning to us. </p>
               </div>
               <div className="d-flex align-items-start mb-xl-5 mb-3">
                 <div
@@ -92,7 +92,7 @@ const About = () => {
                   Schedule a meeting
                   </h5>
                   <p>
-                    CConnect with our travel specialist to discuss your holiday in depth.<br/> We create a tailor-made journey as that is unique as you are. 
+                    Connect with our travel specialist to discuss your holiday in depth.<br/> We create a tailor-made journey as that is unique as you are. 
                     
                   </p>
                 </div>
