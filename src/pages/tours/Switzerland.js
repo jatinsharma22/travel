@@ -1,44 +1,56 @@
 import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { FaRegStar, FaStar,  } from "react-icons/fa";
+import { FaRegStar, FaStar } from "react-icons/fa";
 import { IoMdCheckmark } from "react-icons/io";
 import { IoMapOutline, IoPersonAddOutline } from "react-icons/io5";
 import { LuClock } from "react-icons/lu";
-
+import Slider from "react-slick";
 
 const Switzerland = () => {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    nav: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+  };
 
   return (
     <>
-      <Row className="g-0 m-0">
-        <Col md={6}>
-          <img src="../images/swit1.jpg" className="w-full" />
-        </Col>
-        <Col md={6} className="ps-1 pe-1">
-          <Row className="g-1">
-            <Col md={6}>
-              <img src="../images/swit2.jpg" className="w-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/swit3.jpg" className="w-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/swit6.jpg" className="w-full h-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/swit5.jpg" className="w-full" />
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+      <Slider {...settings} className="md:hidden">
+        <div>
+          <img src="../images/swit1.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/swit2.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/swit3.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/swit4.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/swit5.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/swit6.jpg" alt="" />
+        </div>
+      </Slider>
+      <div className="g-0 m-0 hidden md:flex">
+        <img src="../images/switzerland_main_banner.jpg" alt="" />
+      </div>
 
       <section className="py-4 py-sm-5">
         <Container>
-          <div className="flex flex-wrap justify-between pb-8 pt-6 mb-8 border-b border-stock-1">
-            <div className="">
+          <div className="sm:flex justify-between sm:pb-8 pb-4 mb-4 sm:mb-8 border-b border-stock-1">
+            <div className="flex-1 sm:pr-3">
               <h1 className="fs-2 mb-3">
                 Glimpse Of Switzerland | FREE FIFA Museum Tickets
               </h1>
@@ -50,10 +62,10 @@ const Switzerland = () => {
                 <FaRegStar className="me-1 text-warning" />
               </div>
             </div>
-            <div className="">
-              <del>INR 1,20,800</del>
-              <h2 className="lg:text-[35px] leading-1.2 md:text-xl font-semibold mb-3">
-                INR 99,800
+            <div className="md:w-52 sm:text-right lg:text-left">
+              <del>1333.33 EUR</del>
+              <h2 className="lg:text-[35px] leading-1.2 text-xl md:text-2xl font-semibold mb-3">
+                1101.54 EUR
               </h2>
               <div className="text-md font-normal ml-1">per person</div>
             </div>
@@ -63,16 +75,16 @@ const Switzerland = () => {
               <h3 className="lg:text-2xl text-xl text-black font-medium leading-[1.5] mb-6">
                 Glimpse Of Switzerland Overview
               </h3>
-              <ul className="flex items-center gap-4 text-black mb-8">
+              <ul className="flex items-center gap-4 text-black mb-8 flex-wrap">
                 <li className="pe-4 border-r border-zinc-400 flex items-center">
-                <LuClock className="mr-2" /> 4 Days / 5 Night
+                  <LuClock className="mr-2" /> 4 Days / 5 Night
                 </li>
                 <li className="pe-4 border-r border-zinc-400 flex items-center">
                   {" "}
                   <IoPersonAddOutline className="mr-2" /> Max People : 10
                 </li>
                 <li className="pe-4 flex items-center">
-                <IoMapOutline className="mr-2" /> North Transylvania
+                  <IoMapOutline className="mr-2" /> North Transylvania
                 </li>
               </ul>
               <p>
@@ -197,39 +209,39 @@ const Switzerland = () => {
                       </h5>
                       <ul className="flex flex-col gap-3">
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Arrive at the Zurich Airport and get ready with the
-                          necessary documentation for the immigration process.
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Arrive at the Zurich Airport and get ready with the
+                          necessary documentation for the immigration process.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          It will take around 45 minutes to 1 hour depending
-                          upon the people in the queue.
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">It will take around 45 minutes to 1 hour depending
+                          upon the people in the queue.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          After the immigration process, take public transport
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">After the immigration process, take public transport
                           (bus) using a Swiss Pass to reach your pre-booked
-                          hotel.
+                          hotel.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Proceed with the check-in formalities and spend the
-                          rest of the day at leisure.
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Proceed with the check-in formalities and spend the
+                          rest of the day at leisure.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          You can stroll around the streets of Zurich, stroll
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">You can stroll around the streets of Zurich, stroll
                           around the markets and collect souvenirs for your
-                          loved ones.
+                          loved ones.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />{" "}
-                          Head back to the hotel for the overnight stay.
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>{" "}
+                          <span className="flex-1">Head back to the hotel for the overnight stay.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />{" "}
-                          Overnight stay in Zurich.
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>{" "}
+                          <span className="flex-1">Overnight stay in Zurich.</span>
                         </li>
                       </ul>
                     </div>
@@ -248,39 +260,39 @@ const Switzerland = () => {
                       </h5>
                       <ul className="flex flex-col gap-3">
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Arrive at the Zurich Airport and get ready with the
-                          necessary documentation for the immigration process.
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Arrive at the Zurich Airport and get ready with the
+                          necessary documentation for the immigration process.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          It will take around 45 minutes to 1 hour depending
-                          upon the people in the queue.
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                         <span className="flex-1"> It will take around 45 minutes to 1 hour depending
+                          upon the people in the queue.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          After the immigration process, take public transport
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">After the immigration process, take public transport
                           (bus) using a Swiss Pass to reach your pre-booked
-                          hotel.
+                          hotel.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Proceed with the check-in formalities and spend the
-                          rest of the day at leisure.
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Proceed with the check-in formalities and spend the
+                          rest of the day at leisure.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          You can stroll around the streets of Zurich, stroll
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">You can stroll around the streets of Zurich, stroll
                           around the markets and collect souvenirs for your
-                          loved ones.
+                          loved ones.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Head back to the hotel for the overnight stay.
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Head back to the hotel for the overnight stay.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Overnight stay in Zurich.
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Overnight stay in Zurich.</span>
                         </li>
                       </ul>
                     </div>
@@ -298,23 +310,23 @@ const Switzerland = () => {
                       </h5>
                       <ul className="flex flex-col gap-3">
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Wake up to the beautiful morning of Zurich and have a
-                          delicious breakfast
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Wake up to the beautiful morning of Zurich and have a
+                          delicious breakfast</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          You could choose to spend the day in leisure at your
-                          hotel
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">You could choose to spend the day in leisure at your
+                          hotel</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          You could also head out to explore the city and find
-                          be surprised at what the city has to offer
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">You could also head out to explore the city and find
+                          be surprised at what the city has to offer</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Overnight stay in Zurich
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Overnight stay in Zurich</span>
                         </li>
                       </ul>
                     </div>
@@ -332,59 +344,59 @@ const Switzerland = () => {
                       </h5>
                       <ul className="flex flex-col gap-3">
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Open your eyes to the beautiful morning of Zurich,
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Open your eyes to the beautiful morning of Zurich,
                           fill your stomach with a tasty breakfast and get ready
                           o witness Rhine Falls, one of the many wonders of
-                          Nature
+                          Nature</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Board a train from Zurich to Schaffhausen, where the
-                          magnificent Rhine Falls is situated
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                         <span className="flex-1"> Board a train from Zurich to Schaffhausen, where the
+                          magnificent Rhine Falls is situated</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          The towering castle over Rhine Falls is Schloss Laufen
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">The towering castle over Rhine Falls is Schloss Laufen
                           and there are three viewpoints between Schloss Laufen
-                          and Rhine Falls: Belvedere, Kanzeli, and Fischnetz
+                          and Rhine Falls: Belvedere, Kanzeli, and Fischnetz</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Except for Belvedere, the other two viewpoints have
-                          steps that you have to climb
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Except for Belvedere, the other two viewpoints have
+                          steps that you have to climb</span>
                         </li>
 
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Have a thrilling experience while getting to and from
-                          Belevedere via glass lift
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Have a thrilling experience while getting to and from
+                          Belevedere via glass lift</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          You could touch the water from Kanzeli and Fischnetz's
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">You could touch the water from Kanzeli and Fischnetz's
                           viewpoints as the cascading water comes
-                          unrealistically close from here
+                          unrealistically close from here</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          To make your experience more exhilarating, choose from
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">To make your experience more exhilarating, choose from
                           the 4 different boat rides that operate there and
-                          enhance your experience of the Rhine Falls
+                          enhance your experience of the Rhine Falls</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          If you take interest in hiking, then you could explore
-                          the facets of the place by taking short circular hikes
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">If you take interest in hiking, then you could explore
+                          the facets of the place by taking short circular hikes</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          After an eventful day, head towards your hotel in
-                          Zurich
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">After an eventful day, head towards your hotel in
+                          Zurich</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Overnight stay in Zurich
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Overnight stay in Zurich</span>
                         </li>
                       </ul>
                     </div>
@@ -404,44 +416,44 @@ const Switzerland = () => {
                       </h5>
                       <ul className="flex flex-col gap-3">
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Wake up to another blissful morning in Zurich, after
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Wake up to another blissful morning in Zurich, after
                           having a hearty breakfast, get ready to travel through
-                          the city of Zurich
+                          the city of Zurich</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          You could visit the Swiss National Museum with your
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">You could visit the Swiss National Museum with your
                           Swiss Pass which traces Switzerland's history from its
-                          beginnings up to the present day.
+                          beginnings up to the present day.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          To make your day more exciting, you might want to add
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">To make your day more exciting, you might want to add
                           the Zurich Opera House to your checklist, which is
                           nestled at the Sechseläutenplatz and it has been the
-                          home of the Zürich Opera since 1891.
+                          home of the Zürich Opera since 1891.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Stroll around the streets of the old town,
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Stroll around the streets of the old town,
                           Bahnhofstrasse, one of the world's most expensive and
-                          exclusive shopping avenues.
+                          exclusive shopping avenues.</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Witness the rich heritage of football, and the game’s
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Witness the rich heritage of football, and the game’s
                           ultimate prize displayed in a grand manner when you
-                          enter the FIFA museum, using your Swiss Pass
+                          enter the FIFA museum, using your Swiss Pass</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          After you are done exploring the city, head back to
-                          your hotel
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">After you are done exploring the city, head back to
+                          your hotel</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Overnight stay in Zurich
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Overnight stay in Zurich</span>
                         </li>
                       </ul>
                     </div>
@@ -459,14 +471,14 @@ const Switzerland = () => {
                       </h5>
                       <ul className="flex flex-col gap-3">
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Wake up, have a sumptuous breakfast, and get ready to
-                          say goodbye to Zurich
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Wake up, have a sumptuous breakfast, and get ready to
+                          say goodbye to Zurich</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Return home with a plethora of memories of the
-                          unforgettable place, Zurich.
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Return home with a plethora of memories of the
+                          unforgettable place, Zurich.</span>
                         </li>
                       </ul>
                     </div>
@@ -572,10 +584,7 @@ const Switzerland = () => {
                 </p>
 
                 <div>
-                  <button
-                    type="submit"
-                    className="btn w-full"
-                  >
+                  <button type="submit" className="btn w-full">
                     Send Enquiry
                   </button>
                 </div>

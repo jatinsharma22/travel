@@ -7,40 +7,54 @@ import { IoMapOutline, IoPersonAddOutline } from "react-icons/io5";
 import { LuClock } from "react-icons/lu";
 import { MdHotel } from "react-icons/md";
 import { GiMeal } from "react-icons/gi";
+import Slider from "react-slick";
 
 const Norway = () => {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    nav: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+  };
 
   return (
     <>
-      <Row className="g-0 m-0">
-        <Col md={6}>
-          <img src="../images/norway2.jpg" className="w-full" />
-        </Col>
-        <Col md={6} className="ps-1 pe-1">
-          <Row className="g-1">
-            <Col md={6}>
-              <img src="../images/norway6.jpg" className="w-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/norway3.jpg" className="w-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/norway5.jpg" className="w-full h-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/norway4.jpg" className="w-full" />
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+      <Slider {...settings} className="md:hidden">
+        <div>
+          <img src="../images/norway1.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/norway5.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/norway2.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/norway3.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/norway4.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/norway6.jpg" alt="" />
+        </div>
+      </Slider>
+
+      <div className="g-0 m-0 hidden md:flex">
+        <img src="../images/norway_main_banner.jpg" alt="" />
+      </div>
 
       <section className="py-4 py-sm-5">
         <Container>
-          <div className="flex flex-wrap justify-between pb-8 pt-6 mb-8 border-b border-stock-1">
-            <div className="">
+          <div className="sm:flex justify-between sm:pb-8 pb-4 mb-4 sm:mb-8 border-b border-stock-1">
+            <div className="flex-1 sm:pr-3">
               <h1 className="fs-2 mb-3">
                 Norway in a Nutshell with FREE Fjord Cruise Ride
               </h1>
@@ -52,10 +66,10 @@ const Norway = () => {
                 <FaRegStar className="me-1 text-warning" />
               </div>
             </div>
-            <div className="">
-              <del>INR 2,13,030</del>
-              <h2 className="lg:text-[35px] leading-1.2 md:text-xl font-semibold mb-3">
-                INR 1,57,800
+            <div className="md:w-52 sm:text-right lg:text-left">
+              <del>2351.32 EUR</del>
+              <h2 className="lg:text-[35px] leading-1.2 text-xl md:text-2xl font-semibold mb-3">
+                1741.72 EUR
               </h2>
               <div className="text-md font-normal ml-1">Per Person</div>
             </div>
@@ -65,7 +79,7 @@ const Norway = () => {
               <h3 className="lg:text-2xl text-xl text-black font-medium leading-[1.5] mb-6">
                 Trip Highlights
               </h3>
-              <ul className="flex items-center gap-4 text-black mb-8">
+              <ul className="flex items-center gap-4 text-black sm:mb-8 mb-4 flex-wrap">
                 <li className="pe-4 border-r border-zinc-400 flex items-center">
                   <LuClock className="mr-2" /> 8 Days / 7 Night
                 </li>
@@ -80,25 +94,41 @@ const Norway = () => {
 
               <ul>
                 <li className="mb-4 flex">
-                  <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />{" "}
-                  Enjoy the calming surroundings and views of the Norwegian
-                  fjords while relaxing on a cruise from Bergen.
+                  <span>
+                    <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />
+                  </span>
+                  <span className="flex-1">
+                    Enjoy the calming surroundings and views of the Norwegian
+                    fjords while relaxing on a cruise from Bergen.
+                  </span>
                 </li>
                 <li className="mb-4 flex">
-                  <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />{" "}
-                  Travel to Oslo and delve into the Norwegian capital's
-                  treasures, visiting iconic landmarks.
+                  <span>
+                    <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />{" "}
+                  </span>
+                  <span className="flex-1">
+                    Travel to Oslo and delve into the Norwegian capital's
+                    treasures, visiting iconic landmarks.
+                  </span>
                 </li>
                 <li className="mb-4 flex">
-                  <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" /> Go
-                  on a scenic cruise through Norway's breathtaking fjords,
-                  beautifying the majestic landscapes, cascading waterfalls, and
-                  towering cliffs.
+                  <span>
+                    <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />{" "}
+                  </span>
+                  <span className="flex-1">
+                    Go on a scenic cruise through Norway's breathtaking fjords,
+                    beautifying the majestic landscapes, cascading waterfalls,
+                    and towering cliffs.
+                  </span>
                 </li>
                 <li className="mb-4 flex">
-                  <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />{" "}
-                  Explore Bergen's charming streets, colorful wooden houses, and
-                  bustling markets.
+                  <span>
+                    <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />{" "}
+                  </span>
+                  <span className="flex-1">
+                    Explore Bergen's charming streets, colorful wooden houses,
+                    and bustling markets.
+                  </span>
                 </li>
               </ul>
 
@@ -260,22 +290,31 @@ const Norway = () => {
                       </div>
                       <ul className="flex flex-col gap-3 mb-4">
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Deluxe hotel in Oslo to Oslo Central
-                          Station
+                          <span>
+                            <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
+                          </span>
+                          <span className="flex-1">
+                            Transfer from Deluxe hotel in Oslo to Oslo Central
+                            Station
+                          </span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Oslo Central Station to Myrdal Station
+                          <span>
+                            <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
+                          </span>
+                          <span className="flex-1">Transfer from Oslo Central Station to Myrdal Station</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Myrdal Station to Flam Station
+                          <span>
+                            <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
+                          </span>
+                          <span className="flex-1">Transfer from Myrdal Station to Flam Station</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Flam Station to Hotel Flamsbrygga, Flam
-                          in Flam
+                          <span>
+                            <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
+                          </span>
+                          <span className="flex-1">Transfer from Flam Station to Hotel Flamsbrygga, Flam in Flam</span>
                         </li>
                       </ul>
 
@@ -331,16 +370,16 @@ const Norway = () => {
                       </div>
                       <ul className="flex flex-col gap-3 mb-4">
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Flam to Gudvangen
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Transfer from Flam to Gudvangen</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Gudvangen to Voss
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Transfer from Gudvangen to Voss</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Voss to Bergen Train Station
+                          <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Transfer from Voss to Bergen Train Station</span>
                         </li>
                       </ul>
                       <div className="p-3 border-b border-gray-200  text-black flex gap-3 mb-3">
@@ -353,13 +392,13 @@ const Norway = () => {
                       </div>
                       <ul className="flex flex-col gap-3 mb-4">
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Scenic Cruise Ride from Flam to Gudvangen on a Shared
-                          basis
+                        <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Scenic Cruise Ride from Flam to Gudvangen on a Shared
+                          basis</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Scenic Train Ride to Bergen on a Shared basis
+                        <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1">Scenic Train Ride to Bergen on a Shared basis</span>
                         </li>
                       </ul>
 
@@ -457,14 +496,14 @@ const Norway = () => {
                       </div>
                       <ul className="flex flex-col gap-3 mb-4">
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Deluxe hotel in Bergen to Bergen
-                          Airport, Flesland
+                        <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                           <span className="flex-1">Transfer from Deluxe hotel in Bergen to Bergen
+                          Airport, Flesland</span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Oslo Airport, Gardermoen to Super Deluxe
-                          hotel in Oslo
+                        <span><IoMdCheckmark className="text-teal-600 mr-2 mt-1" /></span>
+                          <span className="flex-1"> Transfer from Oslo Airport, Gardermoen to Super Deluxe
+                          hotel in Oslo</span>
                         </li>
                       </ul>
                       <div className="p-3 border-b border-gray-200  text-black flex gap-3 mb-3">
@@ -627,7 +666,7 @@ const Norway = () => {
                           <IoMdCheckmark />
                         </td>
                         <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                        Dinner
+                          Dinner
                         </td>
                         <td className="px-6 py-3 text-red-500 text-xl">
                           <IoMdClose />
@@ -638,13 +677,14 @@ const Norway = () => {
                           scope="row"
                           className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800"
                         >
-                          Airport transfer from Oslo Airport, Gardermoen to Deluxe hotel		
+                          Airport transfer from Oslo Airport, Gardermoen to
+                          Deluxe hotel
                         </th>
                         <td className="px-6 py-3 text-green-500 text-xl">
                           <IoMdCheckmark />
                         </td>
                         <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                        Internal Flights
+                          Internal Flights
                         </td>
                         <td className="px-6 py-3 text-red-500 text-xl">
                           <IoMdClose />
@@ -655,13 +695,14 @@ const Norway = () => {
                           scope="row"
                           className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800"
                         >
-                          Bergen Fjord Cruise to Alversund Streams on a Shared basis
+                          Bergen Fjord Cruise to Alversund Streams on a Shared
+                          basis
                         </th>
                         <td className="px-6 py-3 text-green-500 text-xl">
                           <IoMdCheckmark />
                         </td>
                         <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                        Travel Insurance
+                          Travel Insurance
                         </td>
                         <td className="px-6 py-3 text-red-500 text-xl">
                           <IoMdClose />
@@ -677,12 +718,8 @@ const Norway = () => {
                         <td className="px-6 py-3 text-green-500 text-xl">
                           <IoMdCheckmark />
                         </td>
-                        <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                        
-                        </td>
-                        <td className="px-6 py-3 text-red-500 text-xl">
-                          
-                        </td>
+                        <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800"></td>
+                        <td className="px-6 py-3 text-red-500 text-xl"></td>
                       </tr>
 
                       <tr className="border-b border-gray-200 dark:border-gray-700">
@@ -690,18 +727,14 @@ const Norway = () => {
                           scope="row"
                           className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800"
                         >
-                          Scenic Train Ride to Bergen on a Shared basis and ticket
-
+                          Scenic Train Ride to Bergen on a Shared basis and
+                          ticket
                         </th>
                         <td className="px-6 py-3 text-green-500 text-xl">
                           <IoMdCheckmark />
                         </td>
-                        <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                        
-                        </td>
-                        <td className="px-6 py-3 text-red-500 text-xl">
-                          
-                        </td>
+                        <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800"></td>
+                        <td className="px-6 py-3 text-red-500 text-xl"></td>
                       </tr>
                     </tbody>
                   </table>

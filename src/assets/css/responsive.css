@@ -1,16 +1,60 @@
 @media screen and (max-width: 1366px) {
   .hero-title {
-    font-size: 4.20158rem;
+    font-size: 50px;
+  }
+  .banner_main_caption {
+    width: 550px;
+    height: 530px;
+    padding: 70px 90px 90px;
+    outline: 30px solid rgba(255, 255, 255, 0.4);
+  }
+  .section_heading h2 {
+    font-size: 3rem;
+  }
+  .booking br {
+    display: none;
+  }
+  .inner_banner {
+    padding: 200px 0;
   }
 }
 @media screen and (max-width: 1199px) {
+  .newsletter_box {
+    border-radius: 80px 20px 20px 20px;
+    padding: 40px 40px;
+  }
   .service-card {
     padding: 25px 20px;
   }
+  .hero-title {
+    font-size: 47px;
+  }
+  .banner_main_caption {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    outline: 0;
+    border-radius: 20px;
+    max-width: 520px;
+  }
+  .booking,
+  .destination,
+  .services {
+    padding: 30px 0;
+  }
+  .section_heading h2 {
+    font-size: 34px;
+  }
+  .section_heading {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (max-width: 991px) {
+  .inner_banner {
+    padding: 150px 0;
+}
   .hero-title {
-    font-size: 3.20158rem;
+    font-size: 40px;
   }
   .hero-title:before {
     top: 42px;
@@ -39,15 +83,18 @@
   .scrolled {
     padding: 10px 0;
   }
-  .banner_main {
-    padding-top: 120px;
-  }
   .header_nav {
     padding: 20px 0;
   }
 }
 
 @media screen and (max-width: 767px) {
+  .inner_banner {
+    padding: 90px 30px;
+}
+  .service-card:before {
+    display: none;
+  }
   .hero-title {
     font-size: 2.20158rem;
   }
@@ -73,9 +120,7 @@
   .destination {
     padding: 30px 0;
   }
-  .banner_main {
-    padding: 120px 0 40px;
-  }
+
   .slick-prev,
   .slick-next {
     display: none !important;
@@ -86,27 +131,43 @@
 }
 
 @media screen and (max-width: 575px) {
+  .inner_banner {
+    padding: 50px 10px;
+}
+  .banner_main_caption {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  .hero-title {
+    font-size: 24px;
+  }
+  .banner_main_caption .btn {
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 6px;
+  }
   .service-card:before {
     display: none;
   }
-  .banner_main {
-    padding: 100px 0 40px;
+  .homeBannerWrap .slick-slide img {
+    min-height: 300px;
+  }
 }
-}
-@media screen and (max-width: 479px) { 
-    .offcanvas-lg.offcanvas-start {
-        width: 300px;
-    }
-    .hero-title {
-        font-size: 1.5rem;
-    }
-    .section_heading h2 {
-        font-size: 1.4rem;
-    }
-    .service-card h3 {
-        font-size: 18px !important;
-    }
-    .service-card {
-        padding: 17px;
-    }
+@media screen and (max-width: 479px) {
+  .offcanvas-lg.offcanvas-start {
+    width: 300px;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .section_heading h2 {
+    font-size: 1.4rem;
+  }
+  .service-card h3 {
+    font-size: 18px !important;
+  }
+  .service-card {
+    padding: 17px;
+  }
 }

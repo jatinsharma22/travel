@@ -3,9 +3,10 @@ import HomeSlider from "../components/HomeSlider";
 import Services from "../components/Services";
 import Itinerary from "../components/Itinerary";
 import { IoLocationOutline, IoPeopleSharp } from "react-icons/io5";
-import { RiSecurePaymentLine } from "react-icons/ri";
+
 import { FaHeart, FaLeaf, FaMapMarkedAlt } from "react-icons/fa";
-import { MdOutlineConnectingAirports, MdOutlinePayment } from "react-icons/md";
+import { MdOutlinePayment } from "react-icons/md";
+import { LuCalendarClock, LuCalendarCheck  } from "react-icons/lu";
 import { Col, Container, Row } from "react-bootstrap";
 
 
@@ -14,9 +15,8 @@ const Home = () => {
     window.scrollTo(0, 0);
   },[])
 
-  const bannerHeading = "Travel, enjoy and live a new life";
-  const bannerParagraph =
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,";
+  const bannerHeading = "Always take the scenic route";
+  const bannerParagraph = "Start unlocking the world at Unique Travel Crafters with our exceptional travel packages and instant travel bookings tailored to your unique needs and preferences.";
 
   return (
     <>
@@ -32,11 +32,12 @@ const Home = () => {
           <Row className="align-items-center gy-lg-0 gy-sm-5 gy-4">
             <Col lg={6}>
               <div className="section_heading mb-4 mb-sm-5 text-start">
-                <h2 className="fw-bold text-capitalize">
-                  Book Your Next Trip In 3 Easy Steps
+                <h2 className="fw-bold text-capitalize mb-3">
+                  Book your dream holiday in 3 simple steps
                 </h2>
+                <p>Don’t stress! This is fun! Now iis the time to plan the vacation of your dreams. Leave the planning to us. </p>
               </div>
-              <div className="d-flex align-items-start mb-lg-5 mb-3">
+              <div className="d-flex align-items-start mb-xl-5 mb-3">
                 <div
                   className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
                   style={{ backgroundColor: "#F1A501" }}
@@ -45,30 +46,27 @@ const Home = () => {
                 </div>
                 <div className="flex-1">
                   <h5 className="text-secondary fw-bold fs-0 text-dark">
-                    Choose Destination
+                  Choose your destination
                   </h5>
                   <p>
-                    Choose your favourite place. No matter{" "}
-                    <br className="d-none d-sm-block" /> where you travel inside
-                    the World.
+                  Settled on a destination, or maybe even two? <br/>  We will get you closer to your planned holiday. 
                   </p>
                 </div>
               </div>
-              <div className="d-flex align-items-start mb-lg-5 mb-3">
+              <div className="d-flex align-items-start mb-xl-5 mb-3">
                 <div
                   className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
                   style={{ backgroundColor: "#DF6951" }}
                 >
-                  <RiSecurePaymentLine className="fs-2 text-white" />
+                  <LuCalendarClock   className="fs-2 text-white" />
                 </div>
                 <div className="flex-1">
                   <h5 className="text-secondary fw-bold fs-0 text-dark">
-                  Make Payment
+                  Schedule a meeting
                   </h5>
                   <p>
-                    Choose your favourite place. No matter{" "}
-                    <br className="d-none d-sm-block" /> where you travel inside
-                    the World.
+                    CConnect with our travel specialist to discuss your holiday in depth.<br/> We create a tailor-made journey as that is unique as you are. 
+                    
                   </p>
                 </div>
               </div>
@@ -77,16 +75,15 @@ const Home = () => {
                   className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
                   style={{ backgroundColor: "#006380" }}
                 >
-                  <MdOutlineConnectingAirports className="fs-2 text-white" />
+                  <LuCalendarCheck  className="fs-2 text-white" />
                 </div>
                 <div className="flex-1">
                   <h5 className="text-secondary fw-bold fs-0 text-dark">
-                  Reach Airport on Selected Date
+                  Book your holiday
                   </h5>
                   <p>
-                    Choose your favourite place. No matter{" "}
-                    <br className="d-none d-sm-block" /> where you travel inside
-                    the World.
+                  After the meeting, you’ll receive a special travel itinerary <br/>to show your day-to-day journey like flights, car rentals etc. <br/>Sign up with Unique Travel Crafters and we will begin taking care of every detail.
+                     
                   </p>
                 </div>
               </div>

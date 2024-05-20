@@ -16,7 +16,7 @@ const Destination = () => {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 1199,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,

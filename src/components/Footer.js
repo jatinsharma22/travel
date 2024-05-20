@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="footer">
         <Container>
           <Row className="gy-4">
-            <Col lg={3} md={12} sm={12}>
+            <Col lg={3} md={6} sm={6}>
               <Link to="/">
                 <img src="../images/logoBlack.svg" alt="" width="150px" />
               </Link>
@@ -41,7 +41,50 @@ const Footer = () => {
                 </Link>
               </div>
             </Col>
-            <Col lg={3} md={4} sm={6} className="col-6">
+            <Col lg={3} md={6} sm={6} className="order-sm-4">
+              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">Contacts</h4>
+              <div className="callNow flex-column d-flex gap-2 mt-4">
+                <NavLink
+                  to="tel:+13478717951"
+                  className="text-dark text-decoration-none flex items-center"
+                >
+                  <IoCallSharp className="me-2 fs-4" />
+                  +13478717951
+                </NavLink>
+                <NavLink
+                  to="mailto:support@uniquetravelcrafters.com"
+                  className="text-dark text-decoration-none flex items-center "
+                >
+                  <span className="w-8"><IoIosMail className="me-2 fs-4" /></span>
+                  <span className="flex-1 break-all text-sm">support@uniquetravelcrafters.com</span>
+                </NavLink>
+                <p className="text-dark text-decoration-none flex items-center">
+                  <BiSupport className="me-2 fs-4" />
+                  24X7 Support
+                </p>
+              </div>
+            </Col>
+            <Col lg={3} md={6} sm={6} className="col-6">
+              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">More</h4>
+              <ul className="list-unstyled mb-0">
+                <li className="mb-2">
+                  <Link className="fw-medium text-decoration-none" to="/">
+                    Gallery
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link className="fw-medium text-decoration-none" to="/">
+                    Testimonial
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link className="fw-medium text-decoration-none" to="/">
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
+            </Col>
+            <Col lg={3} md={6} sm={6} className="col-6 order-sm-2">
               <h4 className="mb-4 fw-semibold md:text-2xl text-xl">Company</h4>
               <ul className="list-unstyled mb-0">
                 <li className="mb-2">
@@ -63,49 +106,6 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-            </Col>
-            <Col lg={3} md={4} sm={6} className="col-6">
-              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">More</h4>
-              <ul className="list-unstyled mb-0">
-                <li className="mb-2">
-                  <Link className="fw-medium text-decoration-none" to="/">
-                    Gallery
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link className="fw-medium text-decoration-none" to="/">
-                    Testimonial
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link className="fw-medium text-decoration-none" to="/">
-                    FAQ
-                  </Link>
-                </li>
-              </ul>
-            </Col>
-            <Col lg={3} md={4} sm={6}>
-              <h4 className="mb-4 fw-semibold md:text-2xl text-xl">Contacts</h4>
-              <div className="callNow flex-column d-flex gap-2 mt-4">
-                <NavLink
-                  to="tel:+13478717951"
-                  className="text-dark text-decoration-none flex items-center"
-                >
-                  <IoCallSharp className="me-2 fs-4" />
-                  +13478717951
-                </NavLink>
-                <NavLink
-                  to="mailto:support@uniquetravelcrafters.com"
-                  className="text-dark text-decoration-none flex items-center"
-                >
-                  <IoIosMail className="me-2 fs-4" />
-                  support@uniquetravelcrafters.com
-                </NavLink>
-                <p className="text-dark text-decoration-none flex items-center">
-                  <BiSupport className="me-2 fs-4" />
-                  24X7 Support
-                </p>
-              </div>
             </Col>
           </Row>
           <div className="text-center pt-5">

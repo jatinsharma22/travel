@@ -22,7 +22,6 @@ const Header = () => {
   const handleShowLogin = () => setLogin(true);
 
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -60,7 +59,7 @@ const Header = () => {
             </Col>
             <Col md={9} className="flex items-center justify-end col-8">
               <button
-                className="lg:hidden btn py-2 px-3 fs-4"
+                className="lg:hidden btn !p-0 fs-4 w-14 h-12 flex justify-center items-center"
                 onClick={handleShow}
               >
                 <HiMenuAlt3 />
@@ -70,7 +69,11 @@ const Header = () => {
                   <Offcanvas.Title>
                     <div className="logo">
                       <Link to="/">
-                        <h1 className="mb-0">Logo</h1>
+                        <img
+                          src="../images/logoBlack.svg"
+                          alt=""
+                          width="150px"
+                        />
                       </Link>
                     </div>
                   </Offcanvas.Title>
@@ -127,6 +130,7 @@ const Header = () => {
                   </Form.Select>
                 </Offcanvas.Body>
               </Offcanvas>
+
               <div className="ms-3">
                 <Button variant="primary" onClick={handleShowLogin}>
                   Login
@@ -136,20 +140,20 @@ const Header = () => {
           </Row>
         </Container>
       </div>
-      <Modal show={login} onHide={handleCloseLogin} centered size="xl">
+      <Modal show={login} onHide={handleCloseLogin} centered size="xl" className="!pl-0">
         <Modal.Header
           closeButton
           className="p-0 border-0 absolute right-4 top-4 z-50"
         ></Modal.Header>
         <Modal.Body className="p-0">
           <Row className="gx-0">
-            <Col md={6}>
+            <Col lg={6} className="hidden lg:block">
               <img src="../images/login_banner.jpeg" alt="" />
             </Col>
-            <Col md={6}>
+            <Col lg={6}>
               <Tabs defaultActiveKey="login" id="loginSignup" className="">
                 <Tab eventKey="login" title="Login">
-                  <form className="space-y-4 p-4 " action="#" method="POST">
+                  <form className="space-y-4 xs:p-10 p-4" action="#" method="POST">
                     <div>
                       <input
                         id="email"
@@ -199,7 +203,7 @@ const Header = () => {
                   </form>
                 </Tab>
                 <Tab eventKey="signup" title="Signup">
-                  <form className="space-y-4 p-4 " action="#" method="POST">
+                  <form className="space-y-4 xs:p-10 p-4" action="#" method="POST">
                     <div>
                       <input
                         id="name"

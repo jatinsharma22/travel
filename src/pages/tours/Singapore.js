@@ -3,43 +3,58 @@ import { Col, Container, Row } from "react-bootstrap";
 import { FaCar, FaRegStar, FaStar } from "react-icons/fa";
 import { LiaParachuteBoxSolid } from "react-icons/lia";
 import { IoMdCheckmark, IoMdClose } from "react-icons/io";
-import { IoMapOutline, IoPersonAddOutline } from "react-icons/io5";
 import { LuClock } from "react-icons/lu";
 import { MdFlight, MdHotel, MdOutlineNightsStay } from "react-icons/md";
+import Slider from "react-slick";
 
 const Singapore = () => {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    nav: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+  };
 
   return (
     <>
-      <Row className="g-0 m-0">
-        <Col md={6}>
-          <img src="../images/singapore6.jpg" className="w-full" />
-        </Col>
-        <Col md={6} className="ps-1 pe-1">
-          <Row className="g-1">
-            <Col md={6}>
-              <img src="../images/singapore7.jpg" className="w-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/singapore1.jpg" className="w-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/singapore4.jpg" className="w-full h-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/singapore5.jpg" className="w-full" />
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+      <Slider {...settings} className="md:hidden">
+        <div>
+          <img src="../images/singapore1.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/singapore5.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/singapore2.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/singapore3.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/singapore4.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/singapore6.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/singapore7.jpg" alt="" />
+        </div>
+      </Slider>
+      <div className="g-0 m-0 hidden md:flex">
+        <img src="../images/singapore_main_banner.jpg" alt="" />
+      </div>
 
       <section className="py-4 py-sm-5">
         <Container>
-          <div className="flex flex-wrap justify-between pb-8 pt-6 mb-8 border-b border-stock-1">
-            <div className="">
+          <div className="sm:flex justify-between sm:pb-8 pb-4 mb-4 sm:mb-8 border-b border-stock-1">
+            <div className="flex-1 sm:pr-3">
               <h1 className="fs-2 mb-3">
                 Glimpse of Singapore | Flight Inclusive Deal
               </h1>
@@ -51,10 +66,10 @@ const Singapore = () => {
                 <FaRegStar className="me-1 text-warning" />
               </div>
             </div>
-            <div className="">
-              <del>INR 1,30,430</del>
-              <h2 className="lg:text-[35px] leading-1.2 md:text-xl font-semibold mb-3">
-                INR 82,657
+            <div className="md:w-48 sm:text-right lg:text-left">
+              <del>1439.62 EUR</del>
+              <h2 className="lg:text-[35px] leading-1.2 text-xl md:text-2xl font-semibold mb-3">
+                912.33 EUR
               </h2>
               <div className="text-md font-normal ml-1">Per Person</div>
             </div>
@@ -64,7 +79,7 @@ const Singapore = () => {
               <h3 className="lg:text-2xl text-xl text-black font-medium leading-[1.5] mb-6">
                 Trip Highlights
               </h3>
-              <ul className="flex items-center gap-4 text-black mb-8">
+              <ul className="flex items-center gap-4 text-black mb-8 flex-wrap">
                 <li className="pe-4 border-r border-zinc-400 flex items-center">
                   <LuClock className="mr-2" /> 5 Days / 4 Night
                 </li>
@@ -77,29 +92,46 @@ const Singapore = () => {
 
               <ul>
                 <li className="mb-4 flex">
-                  <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />{" "}
-                  From visiting popular attractions to enjoying an exciting
-                  cable car ride, spend a great vacation in Singapore and create
-                  lifelong memories.
+                  <span>
+                    <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />
+                  </span>
+                  <span className="flex-1">
+                    From visiting popular attractions to enjoying an exciting
+                    cable car ride, spend a great vacation in Singapore and
+                    create lifelong memories.
+                  </span>
                 </li>
                 <li className="mb-4 flex">
-                  <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />{" "}
-                  Experience a thrilling Night Safari including a Tram ride,
-                  fire dance show and look at various nocturnal creatures.
+                  <span>
+                    <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />
+                  </span>
+                  <span className="flex-1">
+                    Experience a thrilling Night Safari including a Tram ride,
+                    fire dance show and look at various nocturnal creatures.
+                  </span>
                 </li>
                 <li className="mb-4 flex">
-                  <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />
-                  Visit a key attraction among tourists in Singapore, the
-                  Universal Studios, and spend a day full of joy and adventure.
+                  <span>
+                    <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />
+                  </span>
+                  <span className="flex-1">
+                    Visit a key attraction among tourists in Singapore, the
+                    Universal Studios, and spend a day full of joy and
+                    adventure.
+                  </span>
                 </li>
                 <li className="mb-4 flex">
-                  <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />
-                  Explore Sentosa Island and visit the Adventure Cove Waterpark
-                  to enjoy amazing rides and the Wings of Time show.
+                  <span>
+                    <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />
+                  </span>
+                  <span className="flex-1">
+                    Explore Sentosa Island and visit the Adventure Cove
+                    Waterpark to enjoy amazing rides and the Wings of Time show.
+                  </span>
                 </li>
               </ul>
 
-              <ul className="mt-base mt-8">
+              <ul className="mt-base sm:mt-8 mt-4">
                 <li className="lg:flex lg:pt-6 py-6 lg:pb-6 border-t border-stock-1 last:border-b">
                   <div className="lg:w-1/3 lg:text-2md text-md text-black font-medium">
                     Price Includes
@@ -135,7 +167,7 @@ const Singapore = () => {
                 </li>
               </ul>
 
-              <div className="lg:pt-10 pt-8">
+              <div className="lg:pt-10 sm:pt-8 pt-4">
                 <h3 className="text-2xl mb-3">Tour Plan</h3>
 
                 <div>
@@ -145,7 +177,7 @@ const Singapore = () => {
                         01
                       </div>
                     </div>
-                    <div className="lg:ml-[18px] ml-4 pb-8 flex-1">
+                    <div className="lg:ml-[18px] ml-4 sm:pb-8 pb-4 flex-1">
                       <h5 className="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
                         Day 01 : Singapore
                       </h5>
@@ -214,7 +246,7 @@ const Singapore = () => {
                         02
                       </div>
                     </div>
-                    <div className="lg:ml-[18px] ml-4 pb-8 flex-1">
+                    <div className="lg:ml-[18px] ml-4 sm:pb-8 pb-4 flex-1">
                       <h5 className="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
                         Day 02 : Singapore
                       </h5>
@@ -261,7 +293,7 @@ const Singapore = () => {
                         03
                       </div>
                     </div>
-                    <div className="lg:ml-[18px] ml-4 pb-8 flex-1">
+                    <div className="lg:ml-[18px] ml-4 sm:pb-8 pb-4 flex-1">
                       <h5 className="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
                         Day 03: Singapore
                       </h5>
@@ -301,7 +333,7 @@ const Singapore = () => {
                         04
                       </div>
                     </div>
-                    <div className="lg:ml-[18px] ml-4 pb-8 flex-1">
+                    <div className="lg:ml-[18px] ml-4 sm:pb-8 pb-4 flex-1">
                       <h5 className="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
                         Day 04: Singapore
                       </h5>
@@ -352,7 +384,7 @@ const Singapore = () => {
                         05
                       </div>
                     </div>
-                    <div className="lg:ml-[18px] ml-4 pb-8 flex-1">
+                    <div className="lg:ml-[18px] ml-4 sm:pb-8 pb-4 flex-1">
                       <h5 className="lg:text-[22px] text-md font-semibold text-dark-1 !lg:mt-[10px] !mt-2 mb-3">
                         Day 05: Singapore
                       </h5>
@@ -627,12 +659,28 @@ const Singapore = () => {
         <Container>
           <h3 className="mb-6 text-2xl">Know Before You Go</h3>
           <ul className="text-dark list-inside list-disc gap-3 flex flex-col">
-            <li>ID proof is mandatory for each individual guest at the time of arrival.</li>
-            <li>Visa assistance will be provided but the price is not included in the package.</li>
+            <li>
+              ID proof is mandatory for each individual guest at the time of
+              arrival.
+            </li>
+            <li>
+              Visa assistance will be provided but the price is not included in
+              the package.
+            </li>
             <li>Please do not litter and keep the destination clean.</li>
-            <li>The activities and tickets included in the package are non-refundable in case of cancellation.</li>
-            <li>Any breakage or damage of any items in the hotel will be charged at actuals.</li>
-            <li>Flights are subjective to availability. In case the mentioned flight is not available, Thrillophilia has the rights to offer flights as per the availability(prices might change).</li>
+            <li>
+              The activities and tickets included in the package are
+              non-refundable in case of cancellation.
+            </li>
+            <li>
+              Any breakage or damage of any items in the hotel will be charged
+              at actuals.
+            </li>
+            <li>
+              Flights are subjective to availability. In case the mentioned
+              flight is not available, Thrillophilia has the rights to offer
+              flights as per the availability(prices might change).
+            </li>
           </ul>
         </Container>
       </div>

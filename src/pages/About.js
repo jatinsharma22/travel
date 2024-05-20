@@ -1,57 +1,51 @@
 import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { IoLocationOutline, IoPeopleSharp } from "react-icons/io5";
-import { RiSecurePaymentLine } from "react-icons/ri";
+import { LuCalendarClock, LuCalendarCheck  } from "react-icons/lu";
 import { FaHeart, FaLeaf, FaMapMarkedAlt } from "react-icons/fa";
-import { MdOutlineConnectingAirports, MdOutlinePayment } from "react-icons/md";
+import { MdOutlinePayment } from "react-icons/md";
 import Banner from "../components/Banner";
 
 const About = () => {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
 
-  const pageHead = "Contact us today to start planning your next extraordinary trip"
+  const pageHead =
+    "Get in touch with us and start planning your next vacation.";
   return (
     <>
       <Banner pageHead={pageHead} />
 
-
-      <div className="py-20">
+      <div className="xl:py-20 lg:py-11 py-7">
         <Container>
-        <div className="section_heading">
-            <h2 className="fw-bold text-capitalize text-start">About Us</h2>
-          </div>
-          <Row>
+          <Row className="items-center gap-5 lg:gap-0">
             <Col lg={6}>
-              <h2 className="text-3xl mb-6">What is Lorem Ipsum?</h2>
+              <div className="section_heading">
+                <h2 className="fw-bold text-capitalize text-start">About Us</h2>
+              </div>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Unique Travel Crafters is a Finland-based travel company that
+                was nurtured with the idea of crafting special & immersive
+                travel packages that cater to travel enthusiasts to plan their
+                travel with comfort.
               </p>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum. esetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Unique Travel Crafters LLC, operates as an online platform
+                catering to B2B customers, offering competition pricing on
+                tickets and hotel reservations worldwide.{" "}
+              </p>
+              <p>
+                Our travel packages are designed diligently to showcase the
+                distinctive features of Finnish culture, nature, and
+                hospitality. By encouraging the visitors to explore the hidden
+                gems and engage with local communities.{" "}
+              </p>
+              <p>
+                At UTC, we also prioritise sustainable tourism practices and
+                promote eco-friendly accommodations, responsible travel
+                activities and initiatives to preserve to protect Finland's
+                natural and cultural heritage.{" "}
               </p>
             </Col>
             <Col lg={6}>
@@ -60,17 +54,18 @@ const About = () => {
           </Row>
         </Container>
       </div>
-      
+
       <div className="booking">
         <Container>
           <Row className="align-items-center gy-lg-0 gy-sm-5 gy-4">
             <Col lg={6}>
               <div className="section_heading mb-4 mb-sm-5 text-start">
-                <h2 className="fw-bold text-capitalize">
-                  Book Your Next Trip In 3 Easy Steps
+                <h2 className="fw-bold text-capitalize mb-3">
+                  Book your dream holiday in 3 simple steps
                 </h2>
+                <p>Don’t stress! This is fun! Now iis the time to plan the vacation of your dreams. Leave the planning to us. </p>
               </div>
-              <div className="d-flex align-items-start mb-lg-5 mb-3">
+              <div className="d-flex align-items-start mb-xl-5 mb-3">
                 <div
                   className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
                   style={{ backgroundColor: "#F1A501" }}
@@ -79,30 +74,27 @@ const About = () => {
                 </div>
                 <div className="flex-1">
                   <h5 className="text-secondary fw-bold fs-0 text-dark">
-                    Choose Destination
+                  Choose your destination
                   </h5>
                   <p>
-                    Choose your favourite place. No matter{" "}
-                    <br className="d-none d-sm-block" /> where you travel inside
-                    the World.
+                  Settled on a destination, or maybe even two? <br/>  We will get you closer to your planned holiday. 
                   </p>
                 </div>
               </div>
-              <div className="d-flex align-items-start mb-lg-5 mb-3">
+              <div className="d-flex align-items-start mb-xl-5 mb-3">
                 <div
                   className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
                   style={{ backgroundColor: "#DF6951" }}
                 >
-                  <RiSecurePaymentLine className="fs-2 text-white" />
+                  <LuCalendarClock   className="fs-2 text-white" />
                 </div>
                 <div className="flex-1">
                   <h5 className="text-secondary fw-bold fs-0 text-dark">
-                  Make Payment
+                  Schedule a meeting
                   </h5>
                   <p>
-                    Choose your favourite place. No matter{" "}
-                    <br className="d-none d-sm-block" /> where you travel inside
-                    the World.
+                    CConnect with our travel specialist to discuss your holiday in depth.<br/> We create a tailor-made journey as that is unique as you are. 
+                    
                   </p>
                 </div>
               </div>
@@ -111,16 +103,15 @@ const About = () => {
                   className="bg-yellow me-sm-4 me-3 p-3 rounded-4"
                   style={{ backgroundColor: "#006380" }}
                 >
-                  <MdOutlineConnectingAirports className="fs-2 text-white" />
+                  <LuCalendarCheck  className="fs-2 text-white" />
                 </div>
                 <div className="flex-1">
                   <h5 className="text-secondary fw-bold fs-0 text-dark">
-                  Reach Airport on Selected Date
+                  Book your holiday
                   </h5>
                   <p>
-                    Choose your favourite place. No matter{" "}
-                    <br className="d-none d-sm-block" /> where you travel inside
-                    the World.
+                  After the meeting, you’ll receive a special travel itinerary <br/>to show your day-to-day journey like flights, car rentals etc. <br/>Sign up with Unique Travel Crafters and we will begin taking care of every detail.
+                     
                   </p>
                 </div>
               </div>

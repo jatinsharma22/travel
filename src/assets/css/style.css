@@ -29,7 +29,12 @@ body {
 a {
   text-decoration: none;
 }
-
+.logo img {
+  transition: all 0.5s linear;
+}
+.sticky  .logo img {
+  max-width: 100px;
+}
 .header_nav {
   padding: 25px 0;
   transition: all 0.3s linear;
@@ -114,7 +119,7 @@ a {
   border: none;
   background-color: #fffefe;
   border-radius: 40px;
-  padding: 40px;
+  padding: 20px;
 }
 .service-card h3 {
   font-family: "Poppins", sans-serif;
@@ -350,4 +355,8 @@ a {
 .header_menu li a.active {
   color: #008b8b;
   border-bottom-color: #008b8b;
+}
+
+.inner_banner {
+  padding: 300px 0;
 }

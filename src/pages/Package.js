@@ -13,7 +13,7 @@ const Package = () => {
   return (
     <>
       <Banner pageHead={pageHead} />
-      <div className="py-20">
+      <div className="xl:py-20 lg:py-11 py-7">
         <Container>
           <div className="section_heading">
             <h2 className="fw-bold text-capitalize text-start">Our Package</h2>
@@ -21,7 +21,7 @@ const Package = () => {
           <Row className="gy-4">
             {API.map((element, key) => {
               return (
-                <Col md={4} key={key}>
+                <Col xl={4} lg={4} md={6} key={key}>
                   <TourPlans element={element} />
                 </Col>
               );

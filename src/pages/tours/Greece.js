@@ -7,40 +7,51 @@ import { IoMapOutline, IoPersonAddOutline } from "react-icons/io5";
 import { LuClock } from "react-icons/lu";
 import { MdHotel, MdOutlineNightsStay } from "react-icons/md";
 import { GiMeal } from "react-icons/gi";
+import Slider from "react-slick";
 
 const Greece = () => {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    nav: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+  };
 
   return (
     <>
-      <Row className="g-0 m-0">
-        <Col md={6}>
-          <img src="../images/greece7.jpg" className="w-full" />
-        </Col>
-        <Col md={6} className="ps-1 pe-1">
-          <Row className="g-1">
-            <Col md={6}>
-              <img src="../images/greece1.jpg" className="w-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/greece3.jpg" className="w-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/greece4.jpg" className="w-full h-full" />
-            </Col>
-            <Col md={6}>
-              <img src="../images/greece2.jpg" className="w-full" />
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+      <Slider {...settings} className="md:hidden">
+        <div>
+          <img src="../images/greece1.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/greece2.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/greece3.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/greece4.jpg" alt="" />
+        </div>
+        <div>
+          <img src="../images/greece7.jpg" alt="" />
+        </div>
+      </Slider>
+
+      <div className="g-0 m-0 hidden md:flex">
+        <img src="../images/greece_main_banner.jpg" alt="" />
+      </div>
 
       <section className="py-4 py-sm-5">
         <Container>
-          <div className="flex flex-wrap justify-between pb-8 pt-6 mb-8 border-b border-stock-1">
-            <div className="">
+          <div className="sm:flex justify-between sm:pb-8 pb-4 mb-4 sm:mb-8 border-b border-stock-1">
+            <div className="flex-1 sm:pr-3">
               <h1 className="fs-2 mb-3">
                 Greece Getaway with FREE Temple of Hephaestus Tickets
               </h1>
@@ -52,10 +63,10 @@ const Greece = () => {
                 <FaRegStar className="me-1 text-warning" />
               </div>
             </div>
-            <div className="">
-              <del>INR 1,46,298</del>
-              <h2 className="lg:text-[35px] leading-1.2 md:text-xl font-semibold mb-3">
-                INR 1,09,999
+            <div className="md:w-48 sm:text-right lg:text-left">
+              <del>1614.76 EUR</del>
+              <h2 className="lg:text-[35px] leading-1.2 text-xl md:text-2xl font-semibold mb-3">
+                1214.11 EUR
               </h2>
               <div className="text-md font-normal ml-1">Per Person</div>
             </div>
@@ -65,7 +76,7 @@ const Greece = () => {
               <h3 className="lg:text-2xl text-xl text-black font-medium leading-[1.5] mb-6">
                 Trip Highlights
               </h3>
-              <ul className="flex items-center gap-4 text-black mb-8">
+              <ul className="flex items-center gap-4 text-black mb-8 flex-wrap">
                 <li className="pe-4 border-r border-zinc-400 flex items-center">
                   <LuClock className="mr-2" /> 6 Days / 5 Night
                 </li>
@@ -82,19 +93,34 @@ const Greece = () => {
 
               <ul>
                 <li className="mb-4 flex">
-                  <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />{" "}
-                  Experience the beauty of Greece's islands, from the romantic
-                  sunsets of Santorini to the charming neighbourhoods of Athens.
+                  <span>
+                    <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />
+                  </span>
+                  <span className="flex-1">
+                    Experience the beauty of Greece's islands, from the romantic
+                    sunsets of Santorini to the charming neighbourhoods of
+                    Athens.
+                  </span>
                 </li>
                 <li className="mb-4 flex">
-                  <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />{" "}
-                  Explore the historic landmarks in Athens, like the Acropolis,
-                  Parthenon, and Temple of Olympian Zeus on a sightseeing tour.
+                  <span>
+                    <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />
+                  </span>
+                  <span className="flex-1">
+                    Explore the historic landmarks in Athens, like the
+                    Acropolis, Parthenon, and Temple of Olympian Zeus on a
+                    sightseeing tour.
+                  </span>
                 </li>
                 <li className="mb-4 flex">
-                  <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" /> Go
-                  Take-in the picturesque views of the sun setting over the
-                  coast from the beautiful village of Oia.
+                  <span>
+                    <IoMdCheckmark className="w-5 text-teal-600 mt-1.5 mr-2" />
+                  </span>{" "}
+                  Go
+                  <span className="flex-1">
+                    Take-in the picturesque views of the sun setting over the
+                    coast from the beautiful village of Oia.
+                  </span>
                 </li>
               </ul>
 
@@ -109,32 +135,32 @@ const Greece = () => {
                         <div className="text-primary-1 lg:text-md text-base mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
-                        <span>Transfer Included</span>
+                        <span className="flex-1">Transfer Included</span>
                       </li>
                       <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
                         <div className="text-primary-1 lg:text-md text-base mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
-                        <span>Stay Included</span>
+                        <span className="flex-1">Stay Included</span>
                       </li>
                       <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
                         <div className="text-primary-1 lg:text-md text-base mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
-                        <span>Breakfast Included</span>
+                        <span className="flex-1">Breakfast Included</span>
                       </li>
                       <li className="col-span-1 text-black text-sm lg:text-base flex items-center">
                         <div className="text-primary-1 text-md mr-2">
                           <IoMdCheckmark className="text-teal-600" />
                         </div>
-                        <span>Sightseeing Included</span>
+                        <span className="flex-1">Sightseeing Included</span>
                       </li>
                     </ul>
                   </div>
                 </li>
               </ul>
 
-              <div className="lg:pt-10 pt-8">
+              <div className="lg:pt-10 pt-6">
                 <h3 className="text-2xl mb-3">Tour Plan</h3>
 
                 <div>
@@ -185,7 +211,9 @@ const Greece = () => {
                           <div className="text-primary-1 lg:text-md text-base mr-2">
                             <IoMdCheckmark className="text-teal-600" />
                           </div>
-                          <span>Breakfast At Fresh Hotel</span>
+                          <span className="flex-1">
+                            Breakfast At Fresh Hotel
+                          </span>
                         </li>
                       </ul>
                       <div className="p-3 border-b border-gray-200  text-black flex gap-3">
@@ -229,17 +257,29 @@ const Greece = () => {
                       </div>
                       <ul className="flex flex-col gap-3 mb-4">
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Fresh Hotel in Athens to Athens Port
+                          <span>
+                            <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
+                          </span>
+                          <span className="flex-1">
+                            Transfer from Fresh Hotel in Athens to Athens Port
+                          </span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Athens Port to Santorini Port
+                          <span>
+                            <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
+                          </span>
+                          <span className="flex-1">
+                            Transfer from Athens Port to Santorini Port{" "}
+                          </span>
                         </li>
                         <li className="flex items-start">
-                          <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
-                          Transfer from Santorini Port to Santorini Palace in
-                          Santorini
+                          <span>
+                            <IoMdCheckmark className="text-teal-600 mr-2 mt-1" />
+                          </span>
+                          <span className="flex-1">
+                            Transfer from Santorini Port to Santorini Palace in
+                            Santorini
+                          </span>
                         </li>
                       </ul>
 
@@ -368,7 +408,7 @@ const Greece = () => {
                           <IoMdCheckmark />
                         </td>
                         <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                        Expenses of a personal nature.
+                          Expenses of a personal nature.
                         </td>
                         <td className="px-6 py-3 text-red-500 text-xl">
                           {" "}
@@ -386,7 +426,7 @@ const Greece = () => {
                           <IoMdCheckmark />
                         </td>
                         <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                        Meals not mentioned in the itinerary or inclusions
+                          Meals not mentioned in the itinerary or inclusions
                         </td>
                         <td className="px-6 py-3 text-red-500 text-xl">
                           {" "}
@@ -424,7 +464,7 @@ const Greece = () => {
                           <IoMdCheckmark />
                         </td>
                         <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                        Personal expenses on items such as Laundry
+                          Personal expenses on items such as Laundry
                         </td>
                         <td className="px-6 py-3 text-red-500 text-xl">
                           <IoMdClose />
@@ -436,17 +476,12 @@ const Greece = () => {
                           className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800"
                         >
                           Airport transfer from Santorini Airport
-
                         </th>
                         <td className="px-6 py-3 text-green-500 text-xl">
                           <IoMdCheckmark />
                         </td>
-                        <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                           
-                        </td>
-                        <td className="px-6 py-3 text-red-500 text-xl">
-                          
-                        </td>
+                        <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800"></td>
+                        <td className="px-6 py-3 text-red-500 text-xl"></td>
                       </tr>
                       <tr className="border-b border-gray-200 dark:border-gray-700">
                         <th
@@ -454,35 +489,26 @@ const Greece = () => {
                           className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800"
                         >
                           Daily Breakfast
-
                         </th>
                         <td className="px-6 py-3 text-green-500 text-xl">
                           <IoMdCheckmark />
                         </td>
-                        <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                          
-                        </td>
-                        <td className="px-6 py-3 text-red-500 text-xl">
-                          
-                        </td>
+                        <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800"></td>
+                        <td className="px-6 py-3 text-red-500 text-xl"></td>
                       </tr>
                       <tr className="border-b border-gray-200 dark:border-gray-700">
                         <th
                           scope="row"
                           className="px-6 py-3 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800"
                         >
-                         Visa assistance
-
+                          Visa assistance
                         </th>
                         <td className="px-6 py-3 text-green-500 text-xl">
                           <IoMdCheckmark />
                         </td>
-                        <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-                        </td>
-                        <td className="px-6 py-3 text-red-500 text-xl">
-                        </td>
+                        <td className="px-6 py-3 bg-gray-50 dark:bg-gray-800"></td>
+                        <td className="px-6 py-3 text-red-500 text-xl"></td>
                       </tr>
-                       
                     </tbody>
                   </table>
                 </div>
@@ -598,13 +624,23 @@ const Greece = () => {
 
       <div className="bg-[#e8dcca] py-10 mb-10">
         <Container>
-            <h3 className="mb-6 text-2xl">Know Before You Go</h3>
-            <ul className="text-dark list-inside list-disc gap-3 flex flex-col">
-                <li>ID proof is mandatory for each individual guest at the time of arrival.</li>
-                <li>The hotels are subject to their availability. In case they are not available, the travellers will be accommodated in a property of similar standard.</li>
-                <li>Any breakage or damage of any items in the hotel will be charged at actuals.</li>
-                <li>Please do not litter and keep the environment clean.</li>
-            </ul>
+          <h3 className="mb-6 text-2xl">Know Before You Go</h3>
+          <ul className="text-dark list-inside list-disc gap-3 flex flex-col">
+            <li>
+              ID proof is mandatory for each individual guest at the time of
+              arrival.
+            </li>
+            <li>
+              The hotels are subject to their availability. In case they are not
+              available, the travellers will be accommodated in a property of
+              similar standard.
+            </li>
+            <li>
+              Any breakage or damage of any items in the hotel will be charged
+              at actuals.
+            </li>
+            <li>Please do not litter and keep the environment clean.</li>
+          </ul>
         </Container>
       </div>
     </>
