@@ -9,11 +9,12 @@ import { BiSupport } from "react-icons/bi";
 import Banner from "../components/Banner";
 
 const Contact = () => {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
 
-  const pageHead = "Get in touch with us and start planning your next vacation."
+  const pageHead =
+    "Get in touch with us and start planning your next vacation.";
   return (
     <>
       <Banner pageHead={pageHead} />
@@ -39,7 +40,7 @@ const Contact = () => {
                   </h5>
                   <Link
                     to="mailto:support@uniquetravelcrafters.com"
-                    className="text-dark text-decoration-none flex items-center text-black hover:text-teal-600"
+                    className="text-dark text-decoration-none flex items-center text-black hover:text-teal-600 break-all"
                   >
                     support@uniquetravelcrafters.com
                   </Link>
@@ -54,7 +55,7 @@ const Contact = () => {
                 </div>
                 <div className="flex-1">
                   <h5 className="text-secondary fw-bold fs-0 text-dark mb-1.5">
-                  24X7 Support
+                    24X7 Support
                   </h5>
                   <Link
                     to="tel:+13478717951"
@@ -80,7 +81,7 @@ const Contact = () => {
                     alt="shape"
                   />
                 </div>
-                <div className="p-12 bg-white booking_card shadow w-full">
+                <div className="md:p-12 sm:p-8 p-6 bg-white booking_card shadow w-full">
                   <form className="row gap-y-4" action="#" method="POST">
                     <div className="col-sm-6">
                       <input
@@ -117,6 +118,7 @@ const Contact = () => {
                             name="country"
                             className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
                           >
+                            <option>FI</option>
                             <option>US</option>
                             <option>CA</option>
                             <option>EU</option>

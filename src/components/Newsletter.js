@@ -10,8 +10,9 @@ const Newsletter = () => {
           <div className="newsletter_box position-relative text-center">
             <Row className="justify-content-center">
               <div className="col-xl-8 col-md-10">
-                <h2 className="text-white lh-1-7 xl:mb-7 mb-4 xl:text-4xl lg:text-3xl text-2xl">
-                Subscribe now for hand-picked holiday deals, inspiration, and the latest travel tips straight to your inbox. 
+                <h2 className="text-white lh-1-7 xl:mb-7 mb-4 xl:text-4xl lg:text-3xl text-xl">
+                  Subscribe now for hand-picked holiday deals, inspiration, and
+                  the latest travel tips straight to your inbox.
                 </h2>
                 <form className="row g-3 align-items-center w-75 mx-auto mt-4 mt-xl-5">
                   <div className="col-sm">

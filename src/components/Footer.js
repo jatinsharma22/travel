@@ -55,8 +55,12 @@ const Footer = () => {
                   to="mailto:support@uniquetravelcrafters.com"
                   className="text-dark text-decoration-none flex items-center "
                 >
-                  <span className="w-8"><IoIosMail className="me-2 fs-4" /></span>
-                  <span className="flex-1 break-all text-sm">support@uniquetravelcrafters.com</span>
+                  <span className="w-8">
+                    <IoIosMail className="me-2 fs-4" />
+                  </span>
+                  <span className="flex-1 break-all text-sm">
+                    support@uniquetravelcrafters.com
+                  </span>
                 </NavLink>
                 <p className="text-dark text-decoration-none flex items-center">
                   <BiSupport className="me-2 fs-4" />
@@ -68,19 +72,19 @@ const Footer = () => {
               <h4 className="mb-4 fw-semibold md:text-2xl text-xl">More</h4>
               <ul className="list-unstyled mb-0">
                 <li className="mb-2">
-                  <Link className="fw-medium text-decoration-none" to="/">
+                  <span className="fw-medium text-decoration-none text-black">
                     Gallery
-                  </Link>
+                  </span>
                 </li>
                 <li className="mb-2">
-                  <Link className="fw-medium text-decoration-none" to="/">
+                  <span className="fw-medium text-decoration-none text-black">
                     Testimonials
-                  </Link>
+                  </span>
                 </li>
                 <li className="mb-2">
-                  <Link className="fw-medium text-decoration-none" to="/">
+                  <span className="fw-medium text-decoration-none text-black">
                     FAQ
-                  </Link>
+                  </span>
                 </li>
               </ul>
             </Col>
@@ -93,7 +97,10 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className="mb-2">
-                  <Link className="fw-medium text-decoration-none" to="/package">
+                  <Link
+                    className="fw-medium text-decoration-none"
+                    to="/package"
+                  >
                     Packages
                   </Link>
                 </li>

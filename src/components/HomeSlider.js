@@ -42,7 +42,7 @@ const HomeSlider = ({ bannerHeading, bannerParagraph }) => {
             <div className="banner_main_caption">
               <h1 className="hero-title">{bannerHeading}</h1>
               <p className="mb-4">{bannerParagraph}</p>
-              <Link className="btn" to="/package">
+              <Link className="btn" to="/about">
                 Find out more
               </Link>
             </div>

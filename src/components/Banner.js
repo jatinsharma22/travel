@@ -14,7 +14,9 @@ const Banner = ({ pageHead, pageSlug }) => {
           <p className="text-xl font-light text-white tracking-wider mb-3">
             UNLOCKING THE WORLD
           </p>
-          <h1 className="xl:text-[50px] sm:text-4xl xs:text-3xl text-2xl xl:leading-none font-bold text-white">{pageHead}</h1>
+          <h1 className="xl:text-[50px] sm:text-4xl xs:text-3xl text-xl xl:leading-none font-bold text-white">
+            {pageHead}
+          </h1>
           {pageSlug && (
             <Link className="btn fs-5 mt-10" to="/">
               Home
