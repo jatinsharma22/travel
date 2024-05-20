@@ -10,9 +10,8 @@ const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const pageHead =
-    "Get in touch with us and start planning your next vacation.";
+  
+  const pageHead = "Get in touch with us and start planning your next vacation.";
   return (
     <>
       <Banner pageHead={pageHead} />

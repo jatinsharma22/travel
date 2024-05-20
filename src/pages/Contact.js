@@ -13,7 +13,7 @@ const Contact = () => {
     window.scrollTo(0, 0);
   },[])
 
-  const pageHead = "Contact us today to start planning your next extraordinary trip"
+  const pageHead = "Get in touch with us and start planning your next vacation."
   return (
     <>
       <Banner pageHead={pageHead} />

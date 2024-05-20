@@ -74,7 +74,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-2">
                   <Link className="fw-medium text-decoration-none" to="/">
-                    Testimonial
+                    Testimonials
                   </Link>
                 </li>
                 <li className="mb-2">
@@ -94,7 +94,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-2">
                   <Link className="fw-medium text-decoration-none" to="/package">
-                    Package
+                    Packages
                   </Link>
                 </li>
                 <li className="mb-2">
