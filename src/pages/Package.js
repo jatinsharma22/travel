@@ -16,7 +16,7 @@ const Package = () => {
       <div className="xl:py-20 lg:py-11 py-7">
         <Container>
           <div className="section_heading">
-            <h2 className="fw-bold text-capitalize text-start">Our Package</h2>
+            <h2 className="fw-bold text-capitalize text-start">Our Packages</h2>
           </div>
           <Row className="gy-4">
             {API.map((element, key) => {

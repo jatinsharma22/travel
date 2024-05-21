@@ -21,7 +21,8 @@ const Footer = () => {
               <h5 className="mb-2 fw-semibold text-xl mt-3">Follow us on:</h5>
               <div className="d-flex align-items-center gap-3 social_media mb-3">
                 <Link
-                  to="/"
+                  to="https://www.facebook.com/share/TcxLsYP4kVJEqqqS/?mibextid=kFxxJD"
+                  target="_blank"
                   className="d-flex align-items-center justify-content-center rounded-circle shadow"
                 >
                   <FaFacebookF />
@@ -93,7 +94,7 @@ const Footer = () => {
               <ul className="list-unstyled mb-0">
                 <li className="mb-2">
                   <Link className="fw-medium text-decoration-none" to="/about">
-                    About
+                    About Us
                   </Link>
                 </li>
                 <li className="mb-2">

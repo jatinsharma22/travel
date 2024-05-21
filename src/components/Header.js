@@ -13,17 +13,44 @@ import {
 import { Link, NavLink } from "react-router-dom";
 import { IoCallSharp } from "react-icons/io5";
 import { IoIosMail, IoMdCheckmark } from "react-icons/io";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 import { HiMenuAlt3 } from "react-icons/hi";
 
 const Header = () => {
-  const [login, setLogin] = useState(false);
-
-  const handleCloseLogin = () => setLogin(false);
-  const handleShowLogin = () => setLogin(true);
-
+  // Mobile Menu
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  // Login
+  const [login, setLogin] = useState(false);
+  const handleCloseLogin = () => setLogin(false);
+  const handleShowLogin = () => {
+    setLogin(true);
+    setForgotPwd(false);
+  };
+
+  // Forgot Password
+  const [forgotPwd, setForgotPwd] = useState(false);
+  const handleCloseForgotPwd = () => setForgotPwd(false);
+  const handleShowForgotPwd = () => {
+    setForgotPwd(true);
+    setLogin(false);
+  };
+
+  // Forgot Password
+  const [resetPwd, setResetPwd] = useState(false);
+  const handleCloseResetPwd = () => setResetPwd(false);
+  const handleShowResetPwd = () => {
+    setForgotPwd(false);
+    setResetPwd(true);
+  };
+
+  // Show Password
+  // const [showPassword, setShowPassword] = useState(false);
+  // const togglePasswordVisibility = () => {
+  //   setShowPassword(true);
+  // };
 
   // Header Add Class Active
   const [scrolled, setScrolled] = useState(false);
@@ -105,7 +132,7 @@ const Header = () => {
                         to="/package"
                         className="d-block px-2 pt-2 pb-2.5 hover:text-teal-600 border-b-2 border-transparent"
                       >
-                        Package
+                        Packages
                       </NavLink>
                     </li>
                     <li>
@@ -140,7 +167,16 @@ const Header = () => {
           </Row>
         </Container>
       </div>
-      <Modal show={login} onHide={handleCloseLogin} centered size="xl" className="!pl-0">
+
+      {/* Login Signup */}
+
+      <Modal
+        show={login}
+        onHide={handleCloseLogin}
+        centered
+        size="xl"
+        className="!pl-0"
+      >
         <Modal.Header
           closeButton
           className="p-0 border-0 absolute right-4 top-4 z-50"
@@ -151,9 +187,13 @@ const Header = () => {
               <img src="../images/login_banner.jpeg" alt="" />
             </Col>
             <Col lg={6}>
-              <Tabs defaultActiveKey="login" id="loginSignup" className="">
-                <Tab eventKey="login" title="Login">
-                  <form className="space-y-4 xs:p-10 p-4" action="#" method="POST">
+              <Tabs defaultActiveKey="signin" id="loginSignup" className="">
+                <Tab eventKey="signin" title="Sign In">
+                  <form
+                    className="space-y-4 xs:p-10 p-4"
+                    action="#"
+                    method="POST"
+                  >
                     <div>
                       <input
                         id="email"
@@ -161,22 +201,36 @@ const Header = () => {
                         type="email"
                         placeholder="Email address"
                         autoComplete="email"
-                        required
                         className="px-3 block w-full rounded-md border-1 py-3 text-gray-900 shadow-sm placeholder:text-gray-400  sm:text-sm sm:leading-6 ring-0 focus:ring-0 focus:border-0 focus:shadow-none"
                       />
                     </div>
 
-                    <div>
+                    <div className="relative">
                       <input
                         id="password"
                         name="password"
-                        type="password"
                         placeholder="Password"
+                        type="password"
+                        // type={showPassword ? "text" : "password"}
                         required
                         className="px-3 block w-full rounded-md border-1 py-3 text-gray-900 shadow-sm placeholder:text-gray-400  sm:text-sm sm:leading-6 ring-0 focus:ring-0 focus:border-0 focus:shadow-none"
                       />
+                      {/* <button
+                        onClick={togglePasswordVisibility}
+                        style={{
+                          position: "absolute",
+                          right: "15px",
+                          top: "17px",
+                          background: "none",
+                          border: "none",
+                          cursor: "pointer",
+                          fontSize: "18px"
+                        }}
+                      >
+                        {showPassword ? <IoEyeOff /> : <IoEye />}
+                      </button> */}
                     </div>
-                    <div className="flex items-center my-4">
+                    <div className="flex items-center !my-8">
                       <div className="flex items-center">
                         <input
                           id="t-c"
@@ -191,19 +245,40 @@ const Header = () => {
                           Remember me
                         </label>
                       </div>
-                      <Link to="" className="text-red-600 text-sm ml-auto">
+                      <button
+                        onClick={handleShowForgotPwd}
+                        className="text-red-600 text-sm ml-auto"
+                      >
                         Forgot Password?
-                      </Link>
+                      </button>
                     </div>
                     <div>
                       <button type="submit" className="btn w-full">
                         Sign In
                       </button>
                     </div>
+                    <div className="max-w-96 mx-auto  !my-10 text-center after:w-full after:h-[1px] relative after:bg-slate-300 after:content-[''] after:absolute after:top-3 after:left-0">
+                        <span className="bg-white font-semibold z-30 inline-block relative px-4">OR</span>
+                    </div>
+                    <div className="flex gap-6 justify-center mb-6">
+                      <Link to="">
+                        <img src="../images/fb.svg" alt="" width={40} height={40} />
+                      </Link>
+                      <Link to="">
+                        <img src="../images/instagram.svg" alt="" width={40} height={40} />
+                      </Link>
+                      <Link to="">
+                        <img src="../images/google.svg" alt="" width={40} height={40} />
+                      </Link>
+                    </div>
                   </form>
                 </Tab>
-                <Tab eventKey="signup" title="Signup">
-                  <form className="space-y-4 xs:p-10 p-4" action="#" method="POST">
+                <Tab eventKey="signup" title="Sign Up">
+                  <form
+                    className="space-y-4 xs:p-10 p-4"
+                    action="#"
+                    method="POST"
+                  >
                     <div>
                       <input
                         id="name"
@@ -236,6 +311,7 @@ const Header = () => {
                           name="country"
                           className="h-full rounded-md bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
                         >
+                          <option>FI</option>
                           <option>US</option>
                           <option>CA</option>
                           <option>EU</option>
@@ -295,6 +371,103 @@ const Header = () => {
               </Tabs>
             </Col>
           </Row>
+        </Modal.Body>
+      </Modal>
+
+      {/* Forgot Password */}
+
+      <Modal
+        show={forgotPwd}
+        onHide={handleCloseForgotPwd}
+        centered
+        size="md"
+        className="!pl-0"
+      >
+        <Modal.Header
+          closeButton
+          className="p-0 border-0 absolute right-4 top-4 z-50"
+        ></Modal.Header>
+        <Modal.Body className="p-0">
+          <form className="space-y-4 xs:p-10 p-4" action="#" method="POST">
+            <h2 className="text-2xl font-semibold text-black mb-6">
+              Enter Email Address
+            </h2>
+            <div>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email Address"
+                autoComplete="email"
+                required
+                className="px-3 block w-full rounded-md border-1 py-3 text-gray-900 shadow-sm placeholder:text-gray-400  sm:text-sm sm:leading-6 ring-0 focus:ring-0 focus:border-0 focus:shadow-none"
+              />
+            </div>
+            <div className="text-center !my-8">
+              <button
+                type="button"
+                onClick={handleShowLogin}
+                className="text-red-600 text-sm text-center block bg-transparent p-0 w-auto m-auto"
+              >
+                Back to sign in
+              </button>
+            </div>
+            <div>
+              <button
+                type="submit"
+                className="btn w-full"
+                onClick={handleShowResetPwd}
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </Modal.Body>
+      </Modal>
+
+      {/* Reset Password */}
+      <Modal
+        show={resetPwd}
+        onHide={handleCloseResetPwd}
+        centered
+        size="md"
+        className="!pl-0"
+      >
+        <Modal.Header
+          closeButton
+          className="p-0 border-0 absolute right-4 top-4 z-50"
+        ></Modal.Header>
+        <Modal.Body className="p-0">
+          <form className="space-y-4 xs:p-10 p-4" action="#" method="POST">
+            <h2 className="text-2xl font-semibold text-black mb-6">
+              Reset Your Password
+            </h2>
+            <div>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Password"
+                required
+                className="px-3 block w-full rounded-md border-1 py-3 text-gray-900 shadow-sm placeholder:text-gray-400  sm:text-sm sm:leading-6 ring-0 focus:ring-0 focus:border-0 focus:shadow-none"
+              />
+            </div>
+            <div>
+              <input
+                id="resetpassword"
+                name="resetpassword"
+                type="password"
+                placeholder="Reset Password"
+                required
+                className="px-3 block w-full rounded-md border-1 py-3 text-gray-900 shadow-sm placeholder:text-gray-400  sm:text-sm sm:leading-6 ring-0 focus:ring-0 focus:border-0 focus:shadow-none"
+              />
+            </div>
+            <div>
+              <button type="submit" className="btn w-full">
+                Send
+              </button>
+            </div>
+          </form>
         </Modal.Body>
       </Modal>
     </>

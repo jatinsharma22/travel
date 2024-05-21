@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { MdOutlineEmail } from "react-icons/md";
 
 const Newsletter = () => {
@@ -26,7 +26,7 @@ const Newsletter = () => {
                     </div>
                   </div>
                   <div className="col-sm-auto">
-                    <button className="btn fs--1">Subscribe</button>
+                    <Button className="btn fs--1">Subscribe</Button>
                   </div>
                 </form>
               </div>
